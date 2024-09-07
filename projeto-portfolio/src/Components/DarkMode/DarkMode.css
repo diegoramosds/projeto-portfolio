@@ -1,0 +1,158 @@
+.dark_mode {
+    position: relative;
+    left: 90%;
+    bottom: 32px;
+    cursor: pointer;
+    font-size: 1.3em;
+  }
+  .model_moon {
+    color: #797979;
+  }
+  .model_sun {
+    color: #fff;
+  }
+  .model_moon:hover {
+    color: rgba(129, 129, 129, 0.623);
+    transform: translateY(-1px);
+  }
+  .model_sun:hover {
+    color: #d8d5d5;
+    transform: translateY(-1px);
+  }
+  .dark-mode body {
+    background-color: #000000;
+    color: #ffffff;
+  }
+  
+  .dark-mode .header-container {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .dark-mode .hamburger:hover {
+    color: #bbb;
+  }
+  
+  .dark-mode .custom-link {
+    color: #fff;
+  }
+  
+  .dark-mode .custom-link:hover {
+    color: #bbb;
+  }
+  
+  .dark-mode .skill::after,
+  .dark-mode .project::after,
+  .dark-mode .cont::after {
+    background: #bbb;
+  }
+  .dark-mode .edit {
+    background: url('../../img/fun.png')no-repeat center / cover;
+  }
+  .dark-mode .introduction {
+   color: #e2e2e2;
+  }
+  .dark-mode .about-me {
+   color: #e2e2e2;
+  }
+  .dark-mode  .contact svg {
+    color: #e2e2e2;
+   }
+   .dark-mode .contact svg:hover {
+    color: #8f8f8f;
+    transform: translateY(-3px);
+  }
+  .dark-mode .title_skills {
+    color: #ffffff;
+  }
+  .dark-mode .text-linguage {
+    color: #e4e4e4;
+    background-color:#768a97;
+  }
+  .dark-mode .text-description {
+    color: #e4e4e4;
+  }
+  .dark-mode .mypdf {
+    color: #e4e4e4;
+    background-color: #5a5a5a;
+  }
+  .dark-mode .mypdf:hover {
+    color: #c9c9c9;
+    background-color: #807e7e;
+  }
+
+
+
+  .dark-mode .icons-container {
+    background-color: #444444f8;
+    /* 464646f1 5c5c5cc5*/
+  }
+  .dark-mode .icon-item  {
+    background: url('../../img/fundo.avif')no-repeat center / cover;
+  }
+
+
+  .dark-mode .projetos-container {
+    background-color: #5c5c5cc5;
+  }
+  .dark-mode h2{
+    color: #ccc;
+  }
+  .dark-mode .img-item {
+    background-color: #464646;
+    box-shadow: 1px 1px 3px 4px rgba(0, 0, 0, 0.11);
+  }
+  .dark-mode .img-item span,
+  .dark-mode .img-item a {
+    color: #ccc;
+  }
+  .dark-mode .img-item a:hover {
+    color: #bbb;
+  }
+
+
+  .dark-mode .envform  {
+    background-color: #444444f8;
+  }
+  .dark-mode .envform h1 {
+    color: #e3e3e3;
+  }
+  .dark-mode label{
+    color: #fff;
+  }
+  .dark-mode form {
+  background: url('../../img/fun.png')repeat-y bottom right / cover;
+  }
+  .dark-mode .envform  input, textarea{
+    color: rgba(0, 0, 0, 0.479)
+  }
+  .dark-mode textarea::placeholder {
+    color: #aaa
+  }
+  .dark-mode textarea:focus {
+    border: 1px solid #ffffff52;
+  }
+  .dark-mode .envform input::placeholder, textarea::placeholder {
+    color: #aaa;
+  }
+  .dark-mode .envform input:focus{
+    border: 1px solid #ffffff52;
+  }
+  .dark-mode button {
+    color: #ffffff;
+    background-color: #707070b9;
+  }
+  .dark-mode button:hover {
+    background-color: #727272;
+  }
+  .dark-mode footer {
+    color: #ffffffc9;
+    background-color: #727272e5;
+  }
+
+  @media screen and (max-width: 766px) { 
+    .dark_mode {
+      bottom: 23px;
+      font-size: 1.2em;
+    }
+  }
