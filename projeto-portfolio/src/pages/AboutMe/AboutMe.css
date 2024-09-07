@@ -1,0 +1,33 @@
+.about-text {
+    width: 100vw;
+    height:90vh;
+    background-color: #D8DAD5;
+} 
+
+.text-details{
+    position: relative;
+    top: 15%;
+    margin: 0 auto;
+    width: 50%;
+}
+.icons-about  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    top:23%;
+    font-size: 1.2em;
+    margin: 10px;
+}
+.icons-about svg {
+    padding: 5px;
+    color: #e4e4e4;
+    border-radius: 20px;
+    background-color: #005f9ebe;
+  }
+  .icons-about svg:hover {
+    background-color: #005f9ea1;
+    transform: translatey(-2px);
+    transition: ease 2ms;
+  }
