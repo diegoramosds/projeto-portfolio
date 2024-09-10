@@ -31,14 +31,16 @@ function Particles() {
               itemSize={3}
             />
           </bufferGeometry>
-          <pointsMaterial color="#3b3b3b" size={0.2} />
+          <pointsMaterial color="#e2e2e2e1" size={0} />
+          
         </points>
       );
     }
 
 export default function ParticleBackground() {
   return (
-    <div style={{ position: 'absolute', width: '100%', height: '100%', zIndex: -1, backgroundColor: '#EEEFEA' }}>
+    <div style={{ position: 'absolute', width: '100%', height: '100%', zIndex: -1, 
+     background:  "linear-gradient(-20deg, #000 0%, #000 50%"}}>
       <Canvas
         camera={{ position: [50, 50,1000], fov: 70 }}
         style={{ width: '100%', height: '100%' }}
