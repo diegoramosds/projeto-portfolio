@@ -1,69 +1,69 @@
-.edit {
+.main-home {
   height: 100vh;
-}
-
-.imagem {
-  position: absolute;
-  width: 210px;
-  height:auto;
-  border-radius: 100%;
-  top: 31%;
-  left:10%;
+  color:#e2e2e2da;
 }
 .introduction {
-  font-weight: normal;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.2em;
-  color:#000;
-  position: relative;
-  top: 39%;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -45%);
+  font-size: 1.3em;
 }
-
 .text-container{
   width: 40%;
   margin: 0 auto;
   text-align: center;
   font-size:.92em; 
-  position: relative;
-  top: 43%;
+  position: absolute;
+  top: 59%;
+  left: 50%;
+  transform: translate(-50%, -59%);
+}
+.typing {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -48%);
+}
+.icons-about  {
+  display: flex;
+  width: 120px;
+  border: 1px solid #e4e4e415;
+  background-color:#e4e4e415 ;
+  border-radius: 20px;
+  justify-content: center;
+  gap: 12px;
+  font-size: 1.4em;
+  position: absolute;
+  top: 88%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
+.icons-about svg {
+  padding: 3px;
+  margin-top: 3px;
+  color: #e4e4e4cc;
+  border-radius: 20px;
+}
+.icons-about svg:hover {
+  color: #dfd696;
+}
 
 
   @media screen and (max-width: 766px) {
     .introduction {
-      position: absolute;
-      top: 20%;
-      font-size: .84em;
+      
     }
     
-    .imagem {
-      top: 20%;
-      left: 20px;
-      width: 32%;
-    }
     .text-container{
-      position: absolute;
-      top: 24%;
-      margin-left: 20px; 
-      margin-top:0;
-      font-size:.7em;
+   
     }
   
 
     @media (orientation: landscape) {
-      .imagem {
-        width: 23%;
-        left: 6%;
-      }
       .text-container{
-        position: absolute;
-        top: 28%;
-        margin-left: 20px; 
-        margin-top:0;
-        font-size:.7em;
+        
       }
     }
   }
@@ -71,42 +71,20 @@
   @media screen and (min-width: 767px) and (max-width: 1250px) {
  
     .introduction {
-      width: 58%;
-      position: absolute;
-      top:28%;
-      font-size: 1.3em;
+     
     }
-    
-    .imagem {
-      top:26%;
-      left: 5%;
-      width: 220px;
-      height:auto;
-      border-radius: 100%;
-    }
+
     .text-container{
-      position: absolute;
-      top:32%;
-      margin-left: 20px; 
-      width: 40%; 
-      font-size:1em;  
+ 
     }
       
     @media (orientation: landscape) {
       
-    .imagem {
-      top:25%;
-      left: 5%;
-      width: 20%;
-      height:auto;
-     }
      .introduction {
-      top:26%;
-      font-size: 1.2em;
+      
     }
     .text-container{
-      top:35%;
-      font-size:.83em;  
+      
     } 
     }
   }

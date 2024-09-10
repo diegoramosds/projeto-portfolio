@@ -1,24 +1,23 @@
-
 import { FaChartLine, FaLaptopCode } from 'react-icons/fa';
 import './Skills.css';
-import{ Component } from 'react';
+import { Component } from 'react';
+
+
+import 'aos/dist/aos.css';
 
 class Skills extends Component {
+  
   constructor() {
     super();
-    this.state = {
-      iconItemClassName: 'icon-item',
-    };
   }
 
+  // componentDidMount() {
+  //   window.addEventListener('scroll', this.handleScroll);
+  // }
 
-  componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
-  }
+  // componentWillUnmount() {
+  //   window.removeEventListener('scroll', this.handleScroll);
+  // }
 
   render() {
     return (
@@ -43,7 +42,7 @@ class Skills extends Component {
               <div className='details-skills'>
                 <span><FaChartLine className='icon-skills'/></span>
                 <h2>Aprendizado</h2>
-                <p>Alem de estudar front-end venho estudando outras coisas relacinados ao front-end que uso em cursos e projetos </p>
+                <p>Alem de front-end venho estudando coisas relacionados ao front-end que uso em cursos.</p>
                 <div className='information-skills'>
                   <h3>Outros Conhecimentos</h3>
                   <ul>
@@ -55,11 +54,12 @@ class Skills extends Component {
                   </ul>
                 </div>
               </div>
-                <div className='details-text'>
-                  <p> Concluí vários cursos oferecidos pelo Curso em Vídeo e pela Udemy, que me proporcionaram um conhecimenti 
-                      em desenvolvimento web. Além disso, participei de eventos online promovidos pela Rocketseat, 
-                      onde pude me aprofundar em tecnologias modernas e práticas do mercado. Também cursei módulos 
-                      no SENAI, que acrescentaram um conhecimento prático e aplicado ao meu currículo.</p>
+                <div className='details-text' data-aos="fade-right">
+                  <p> Concluí vários cursos oferecidos pelo <strong className='important-name'>Curso em Vídeo</strong> 
+                    e pela <strong className='important-name'>Udemy</strong>, que me proporcionaram um conhecimenti 
+                      em desenvolvimento web. Além disso, participei de eventos online promovidos pela <strong className='important-name'>Rocketseat</strong>, 
+                      onde pude me aprofundar em tecnologias modernas e práticas do mercado. Também cursei 
+                      no <strong className='important-name'>Senai</strong>, que acrescentaram um conhecimento prático e aplicado ao meu currículo.</p>
                 </div>
             </div>
           

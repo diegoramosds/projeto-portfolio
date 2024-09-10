@@ -1,7 +1,13 @@
 import './Contact.css';
 import emailjs from '@emailjs/browser';
 
+import 'aos/dist/aos.css';
+
+
 import { useState } from 'react';
+import { FaGlobeAmericas } from 'react-icons/fa';
+
+import {GiEarthAmerica, GiGalaxy } from 'react-icons/gi';
 
 function Contact() {
 
@@ -34,44 +40,19 @@ function Contact() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState("");
-  const [isopenModal, setOpenModal] = useState("");
-  const [scrollPosition, setScrollPosition] = useState(0);
 
-  const openModal = () => {
-    setScrollPosition(window.pageYOffset);
-    setOpenModal(true);
-    document.body.style.position = 'fixed';
-    document.body.style.top = `-${scrollPosition}px`;
-    document.body.style.overflow = 'hidden';
-    document.body.style.width = '100%';
-  };
+  
 
-  const closeModal = () => {
-    setOpenModal(false);
-    document.body.style.position = '';
-    document.body.style.top = '';
-    document.body.style.overflow = '';
-    document.body.style.width = '';
-    window.scrollTo(0, scrollPosition);
-  };
       return (
         <div className='envform'  id='contact'>
-          <div className='message-form'>
-            <p>Mande sua mensagem <span onClick={openModal}>aqui</span></p>
-            
-          </div>
-          
-
-
-         {isopenModal && 
-         
-         <div className='modalopen'>
-          <div className='modal-content'>
-           <div onClick={closeModal} className='closemodal'>x</div>
+          <h2>Entre em Contato</h2>
+          <span data-aos="fade-right">Se você tem alguma dúvida, sugestão ou apenas quer conversar sobre 
+            um novo projeto, estou à disposição! 
+            Vamos criar algo incrível juntos.</span>
            <form onSubmit={handleSubmit}>
-           
+            
             <label>
-              <span>Nome:</span>
+              Nome:
               <input type="text"
               required name="displayName"
               placeholder="Digite seu nome"
@@ -80,7 +61,7 @@ function Contact() {
               />
             </label>
             <label>
-              <span>Email:</span>
+              Email:
               <input type="email"
               required name="email"
               placeholder="Digite seu E-mail"
@@ -89,7 +70,7 @@ function Contact() {
               />
             </label>
             <label>
-            <span>Sobre:</span>
+            Sobre:
             <textarea
               required
               placeholder="Mande sua mensagem"
@@ -100,15 +81,12 @@ function Contact() {
             {!loading && <button type="submit">Enviar</button>}
             {loading && <button   disabled>Enviando</button>}
           </form>
+          <div className='image-contact' data-aos="fade-left">
+            <GiGalaxy/>
+          </div>
          </div> 
-         </div> 
-         }
-
-
-
-        </div> 
+   
         
       );
-    }
-
+}
     export default Contact;

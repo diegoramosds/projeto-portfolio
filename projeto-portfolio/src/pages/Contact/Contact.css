@@ -1,142 +1,91 @@
 .envform {
+  height: 100vh;
+  background-color: #282a3a7c;
+}
+.envform span{
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-direction: column;
-  height: 20vh;
-  background-color: #ffffffda;
-  padding-bottom: 55px;
+  color: #6C7EA3;
+  position: relative;
+  top: 10%;
 }
 
-.message-form {
-display: flex;
-justify-content: center;
-position: relative;
-bottom: 50%;
-width: 85vw;
-height: 30vh;
-display: flex;
-color: white;
-background-color: #202a48;
-border-radius: 10px;
-}
-.message-form span {
-  padding: 2px 30px;
-  cursor: pointer;
-  border: 1px solid #908ee2;
-  border-radius: 10px;
- }
- .message-form span:hover {
-  background-color: #8f8ee259;
- }
-.envform h1 {
-  text-align: center;
-  font-size: 1.4em;
-  color: #000;
-  padding-top: 50px;
-  margin-bottom: 30px;
-}
 form {
+  position: relative;
+  left: 20%;
+  top: 50%;
+  transform: translate(-20%, -50%);
   text-align: center;
   width: 40vw;
   border-radius: 10px;
-  height:auto;
-  margin: 10px;
-  padding-top: 2.5em;
-  background-color: #ededed;
 }
-
 label {
 font-weight: bold;
-color: #000000;
+color: #dfd696;
 font-size: 1.1em;
 }
-
 .envform input, textarea {
   display: flex;
   text-align: center;
   width: 75%;
-  height:45px ;
   box-sizing: border-box;
-  border-radius: 10px;
   padding: .8em;
   margin: 3em auto;
   background-color: transparent;
   border: none;
-  border: 1px solid;
+  color: #ffffffdc;
+  border-bottom: 1px solid #ffffff3a;
 }
-
 .envform input::placeholder, textarea::placeholder {
-  text-align: center;
- color: #000000d7;
+text-align: center;
+ color: #ffffffdc;
  font-size: 1.2em;
 }
 .envform input:focus, textarea:focus {
 outline: none;
 text-align: center;
-border: 2px solid #12233bb4;
+color: #ffffffdc;
 }
-button {
-  color: white;
-  background-color: #00609e;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 200px;
-  height: 38px;
-  margin: 30px auto;
-  cursor: pointer;
-  font-size: 1.3em;
-  border-radius: 10px;
-  border: none;
-}
-button:hover {
-  background-color: #005f9ed5;
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #282a3af8 inset !important;
+  -webkit-text-fill-color: #ffffff !important;
 }
 
-.modalopen {
-  background-color: rgba(0, 0, 0, 0.822);
-  position: fixed;
-  top: 0%;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.image-contact {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
-}
-.modal-content {
-  padding: 20px;
-  border-radius: 10px;
-  width: 80%;
-  max-width: 500px;
+  justify-content: end;
   position: relative;
+  bottom: 45%;
+  right: 15%;
 }
-.closemodal {
-  position: absolute;
-  top:30px;
-  right: -20px;
-  font-size: 1.3em;
-  cursor: pointer;
+.image-contact svg{
+  width: 250px;
+  height: auto;
+  border-radius: 100%;
+  color: #51c9cbd2;
+  animation: rotate 10s linear infinite;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @media screen and (max-width: 766px) {
   .envform {
-    min-height:76vh;
-    padding-top: 25px;
-    padding-bottom: 1.3em;
+   
   }
   .envform h1 {
-    width: 100%;
-    font-size: 1.3em;
-    margin-bottom: 20px;
+  
   }
   
   form {
-    width: 90vw;
-    margin: 10px;
-    padding-top: 2.5em;
+ 
   }
   
  label {
@@ -144,50 +93,32 @@ button:hover {
   }
   
   .envform input, textarea {
-    width: 80%;
-    height:50px ;
-    margin: 2em auto;
+  
   }
   button {
-    width: 150px;
-    height: 30px;
-    margin: 10px auto;;
-    font-size: 1em;
+    
   }
 }
 
 @media screen and (min-width: 767px) and (max-width: 1250px) {
   .envform {
-    min-height: 60vh;
+    
   }
   
   .envform h1 {
-    height: 0px;
-    margin-bottom: 80px;
-    width: 100%;
-    font-size: 1.5em;
-   padding-top: 40px;
+    
   }
 
   form {
-    width: 90vw;
-    height:auto;
-    margin: 10px;
-    padding-top: 2.5em;
+   
   }
   
  label {
   font-size: 1.5em;
   }
   .envform input, textarea {
-    width: 80%;
-    height:50px;
-    margin: 2.3em auto;
   }
   button {
-    width: 250px;
-    height: 38px;
-    margin: 30px auto;
-    font-size: 1.5em;
+  
   }
 }
