@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import './NavBar.css';
-import DarkMode from '../DarkMode/DarkMode';
+
 
 function Header() {
   
@@ -46,12 +46,13 @@ function Header() {
         </div>
         <div className={`overlay ${isOpen ? 'open' : ''}`} onClick={closeMenu}>
         <nav className={`nav-menu ${isOpen ? 'open' : ''}`}>
+        <span>D<strong className='important-name'>R</strong></span>
         <a  onClick={scrollToSkills} className="custom-link skill">Habilidades</a>
         <a onClick={scrollToProjects} className="custom-link project">Projetos</a>
         <a onClick={scrollToContact} className="custom-link cont">Contato</a>
         </nav>
         </div>
-        <DarkMode />
+
       </div>
       
     );
