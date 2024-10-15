@@ -1,3 +1,4 @@
+import { FaArrowCircleUp } from 'react-icons/fa';
 import './BackToTop.css';
 
 
@@ -28,10 +29,9 @@ function BackToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  
   return (
     <>
-    <div id="arrow-top" onClick={scrollToTop}></div>
+    <div id="arrow-top" onClick={scrollToTop}> <FaArrowCircleUp title='Voltar para o inicio' /></div>
     </>
   )
 }
