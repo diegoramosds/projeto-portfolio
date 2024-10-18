@@ -5,7 +5,7 @@ import ParticleBackground from '../../Components/Particles';
 import TypingEffect from '../../Components/TypingEffect';
 
 // Icons
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaFileDownload } from 'react-icons/fa';
 import { HiOutlineDownload } from 'react-icons/hi';
 
 function Home() {
@@ -13,7 +13,7 @@ function Home() {
   
   return (
     <div className='main-home'>
-      <ParticleBackground />
+    <ParticleBackground />
     
       <p className='introduction'>Desenvolvedor &nbsp;<strong className='important-name'>Front-end</strong> </p>
 
@@ -25,6 +25,7 @@ function Home() {
       </div>
       <div className='typing'>
         <h2><TypingEffect /></h2>
+      
       </div>
       <div className='icons-about'>
         <p><a href="https://github.com/diegoramosds"target="_blank"rel="noopener noreferrer">
@@ -34,7 +35,7 @@ function Home() {
         <FaLinkedin title='Meu LinkedIn'/></a></p>
 
         <p><a href="/cv-diego_ramos.pdf" target="_blank" rel="noopener noreferrer">
-        <HiOutlineDownload title='Baixar Curriculo'/></a></p>
+        <FaFileDownload title='Baixar Curriculo'/></a></p>
         </div>
     </div>
     

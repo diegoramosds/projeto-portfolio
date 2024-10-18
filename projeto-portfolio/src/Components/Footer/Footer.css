@@ -4,13 +4,54 @@ footer {
     padding: 1em;
     color: white;
 }
+.icons-footer p {
+  display: flex;
+  flex-direction: column;
+  font-size: 1em;
+  font-weight: bold;
+  margin: 3px;
+  margin-bottom: em;
+}
 
+.icons-footer span {
+ color: #51c9cbd2;
+ font-size: 1em;
+}
+
+.icons-footer a {
+  color: #fff;
+  font-size: 1em;
+ }
+
+.icons-footer svg{
+margin: 5px;
+border: 1px solid #51c9cbd2;
+border-radius: 20px;
+padding: 4px;
+}
+
+.icons-footer svg:hover{
+ background-color: #1c3c5e9f;
+  }
   
   @media screen and (max-width: 766px) {
     footer {
         text-align: center;    
         padding: .7em;
     }
+    .icons-footer p {
+      font-size: .9em;
+    }
+    
+    .icons-footer span {
+     font-size: 1em;
+    }
+    
+    .icons-footer svg{
+    margin: 5px;
+    padding: 4px;
+    }
+    
     
   }
   

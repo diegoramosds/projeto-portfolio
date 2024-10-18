@@ -1,6 +1,6 @@
 .header-container {
   position: relative;
-  height: 0px;
+  height: 10vh;
 }
 .header-container span{
   display: flex;
@@ -13,14 +13,13 @@
   color:#e2e2e2;
   font-size: 1em;
 }
-
 nav {
   display: flex;
   align-items: center;
   gap: 50px;
   justify-content: center;
-
 }
+
 .hamburger {
   width: 10px;
   display: none;
@@ -28,10 +27,13 @@ nav {
   cursor: pointer;
   font-size: 1em;
   margin-left: 10px;
+  color: white;
 }
+
 .hamburger:hover {
-  color: rgb(70, 107, 207);
+  color: #dfd696;
 }
+
 .custom-link{
   margin: 20px;
   font-size: 1.1em;
@@ -48,17 +50,16 @@ nav {
   position: absolute;
   width: 0;
   height: 0;
-  
   display: block;
   margin-top: 2px;
-  background:#ffffffd8;
+  background:#dfd696;
   transition: width 0.1s ease-in-out;
   -webkit-transition: width 0.3s ease-in-out, transform 0.1s ease;
 }
 .skill:hover,
 .project:hover,
 .cont:hover {
-  color:#fff;
+  color:#dfd696;
   font-weight: 600;
 } 
 
@@ -97,28 +98,23 @@ nav {
 
   .nav-menu {
     display: none;
-    position: absolute;
-    top: 50px;
     height: 50vh;
-    z-index: 1000;
   }
 
   .nav-menu.open {
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to bottom, #ffffffa2, #888888fb);
-    border-radius: 0px 10px 10px 0 ;
-    width: 80%;
   }
+  
   .overlay {
     display: none;
     position: fixed;
-    top: 0;
+   
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.733); /* Fundo semi-transparente */
-    z-index: 999;
+    background: rgba(0, 0, 0, 0.918); /* Fundo semi-transparente */
+    z-index: 1;
     transition: opacity 0.3s ease;
   }
   .overlay.open {
@@ -126,66 +122,43 @@ nav {
     opacity: 1;
   }
 
-  .nav-menu a {
-    color: aliceblue;
-    padding: 10px;
-  }
-  
   .custom-link{
-    width: 0;
+    color: white;
     margin: 10px;
-    font-size: .9em;
+    font-size: 1em;
     text-decoration: none;
     font-weight: bold;
     position: relative;
   }
   .skill:hover::after {
-    left: 10px;
+    left: 2px;
   }
   .project:hover::after {
-    left: 10px;
+    left: 2px;
   }
   .cont:hover::after {
-    left: 10px;
+    left: 2px;
   }
 }
 
 @media screen and (min-width: 767px) and (max-width: 1250px) {
   .header-container {
-    position: relative;
     top: 6px;
-    height: 0px;
   }
   nav {
     height: 65px;
     padding: 0.3em 1.3em;
   }
   .hamburger {
-    display: none;
     font-size: 24px;
-    cursor: pointer;
   }
 
   .custom-link{
     margin: 1.3em;
     font-size: 1.3em;
-    text-decoration: none;
-    font-weight: bold;
-    color:rgba(0, 0, 0, 0.479);
-    position: relative;
   }
+
   
-  .skill:hover::after {
-    left: 3px;
-  }
-
-  .project:hover::after {
-    left: 3px;
-  }
-
-  .cont:hover::after {
-    left: 3px;
-  }
   @media (orientation: landscape) {
     .custom-link{
       margin: 1.2.3em;

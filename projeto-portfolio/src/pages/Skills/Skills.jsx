@@ -2,34 +2,24 @@ import { FaChartLine, FaLaptopCode } from 'react-icons/fa';
 import './Skills.css';
 import { Component } from 'react';
 
-
 import 'aos/dist/aos.css';
 
 class Skills extends Component {
-  
   constructor() {
     super();
   }
-
-  // componentDidMount() {
-  //   window.addEventListener('scroll', this.handleScroll);
-  // }
-
-  // componentWillUnmount() {
-  //   window.removeEventListener('scroll', this.handleScroll);
-  // }
 
   render() {
     return (
       <>
           <section >
-            <div className='icons-container'>
-              <div  id='skills' className='details-skills'>
+        <div className='icons-container'>
+            <div  id='skills' className='details-skills'>
                 <span><FaLaptopCode className='icon-skills'/></span>
                 <h2>Desenvolvedor Frontend</h2>
                 <p>Gosto de programar coisas do zero e gosto de dar vida a ideias no navegador.</p>
-                <div className='information-skills'>
-                  <h3>Conhecimentos</h3>
+            <div className='information-skills'>
+            <h3>Conhecimentos</h3>
                   <ul>
                     <li>React</li>
                     <li>JavaScript</li>
@@ -69,3 +59,5 @@ class Skills extends Component {
   }
 }
 export default Skills;
+
+

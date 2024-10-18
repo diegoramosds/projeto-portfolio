@@ -1,21 +1,26 @@
 .envform {
-  height: 100vh;
+  width: 100vw;
   background-color: #282a3a7c;
+  padding-bottom: 6em;
+  padding-top: 2em;
 }
-.envform span{
+.envform p{
   display: flex;
+  text-align: center;
+  margin: 1em;
+  margin-top: 6em;
   justify-content: center;
   color: #6C7EA3;
-  position: relative;
-  top: 10%;
+}
+
+.id {
+  display: flex;
+  justify-content: space-around;
 }
 
 form {
-  position: relative;
-  left: 20%;
-  top: 50%;
-  transform: translate(-20%, -50%);
   text-align: center;
+  margin-top: 5em;
   width: 40vw;
   border-radius: 10px;
 }
@@ -30,7 +35,7 @@ font-size: 1.1em;
   width: 75%;
   box-sizing: border-box;
   padding: .8em;
-  margin: 3em auto;
+  margin:3em auto;
   background-color: transparent;
   border: none;
   color: #ffffffdc;
@@ -53,20 +58,41 @@ input:-webkit-autofill:focus {
   -webkit-text-fill-color: #ffffff !important;
 }
 
-.image-contact {
-  display: flex;
-  justify-content: end;
-  position: relative;
-  bottom: 45%;
-  right: 15%;
+.loading-container .error-message {
+color: #c92121d2;
 }
+.loading-container .success-message {
+  color: #fff;
+  }
+
+.error-message, .success-message {
+  width: 15vw;
+  margin: 0 auto;
+  border-radius: 5%;
+  font-weight: bold;
+  background-color: #51c9cbd2;
+  padding: 5px;
+}
+
 .image-contact svg{
-  width: 250px;
+  width: 160px;
   height: auto;
+  margin-top: 7em;
   border-radius: 100%;
-  color: #51c9cbd2;
+  color: #19aeb1d2;
   animation: rotate 10s linear infinite;
 }
+
+.loading-spinner {
+  display: inline-block;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
@@ -77,48 +103,63 @@ input:-webkit-autofill:focus {
 }
 
 @media screen and (max-width: 766px) {
-  .envform {
-   
+  .envform p{
+    font-size: .8em;
   }
-  .envform h1 {
-  
-  }
-  
+
   form {
- 
+  width: 60vw;
   }
-  
- label {
-  font-size: 1.2em;
+  label {
+  font-size: 1em;
   }
-  
   .envform input, textarea {
-  
+    width: 70%;
+    margin:1.3em auto;
   }
-  button {
-    
+  .envform input::placeholder, textarea::placeholder {
+   font-size: 1em;
+  }
+
+
+  .image-contact svg{
+    width: 100px;
+  }
+
+  
+  @media (orientation: landscape)  {
+    form {
+      width: 50vw;
+      }
+  
+      .envform input, textarea {
+        width: 80%;
+        box-sizing: border-box;
+        padding: 0em;
+        margin:1em auto;
+      }
   }
 }
 
 @media screen and (min-width: 767px) and (max-width: 1250px) {
-  .envform {
-    
-  }
-  
-  .envform h1 {
-    
-  }
-
   form {
-   
+  width: 55vw;
   }
-  
- label {
-  font-size: 1.5em;
+  label {
+  font-size: 1em;
   }
   .envform input, textarea {
+    width: 50%;
+    margin:2.3em auto;
   }
-  button {
+ 
+  .id {
+    display: flex;
+    justify-content: unset;
+  }
   
+  .image-contact svg{
+    margin-left: 5em;
+    width: 170px;
   }
 }

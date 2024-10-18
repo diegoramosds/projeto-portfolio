@@ -1,91 +1,74 @@
 .main-home {
-  height: 100vh;
-  color:#e2e2e2da;
-}
-.introduction {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -45%);
-  font-size: 1.3em;
-}
-.text-container{
-  width: 40%;
-  margin: 0 auto;
+  width: 100vw;
+  min-height: 90vh;
+  color: #e2e2e2da;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  font-size:.92em; 
-  position: absolute;
-  top: 59%;
-  left: 50%;
-  transform: translate(-50%, -59%);
+  gap: 35px;
 }
+
+.introduction {
+  font-size: 1.3em;
+  margin-top: 4em;
+}
+
+.text-container {
+  width: 40%;
+  font-size: 1em;
+}
+
 .typing {
-  position: absolute;
-  top: 48%;
-  left: 50%;
-  transform: translate(-50%, -48%);
+  font-size: 1.1em;
+
 }
-.icons-about  {
+.icons-about {
   display: flex;
   width: 120px;
   border: 1px solid #e4e4e415;
-  background-color:#e4e4e415 ;
+  background-color: #e4e4e415;
   border-radius: 20px;
   justify-content: center;
   gap: 12px;
   font-size: 1.4em;
-  position: absolute;
-  top: 88%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: 7em;
 }
 
 .icons-about svg {
   padding: 3px;
-  margin-top: 3px;
+  margin-top: 5px;
   color: #e4e4e4cc;
   border-radius: 20px;
 }
+
 .icons-about svg:hover {
   color: #dfd696;
 }
 
-
-  @media screen and (max-width: 766px) {
-    .introduction {
-      
-    }
-    
-    .text-container{
-   
-    }
-  
-
-    @media (orientation: landscape) {
-      .text-container{
-        
-      }
-    }
+@media screen and (max-width: 766px) {
+  .introduction {
+    font-size: 1em;
   }
-  
-  @media screen and (min-width: 767px) and (max-width: 1250px) {
- 
-    .introduction {
-     
-    }
 
-    .text-container{
- 
-    }
-      
-    @media (orientation: landscape) {
-      
-     .introduction {
-      
-    }
-    .text-container{
-      
-    } 
-    }
+  .text-container {
+    width: 65%;
+    font-size: .73em;
   }
-  
+
+  .typing {
+    font-size: 1em;
+  }
+
+  .icons-about {
+    font-size: 1.3em;
+    margin-top: 2em;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1250px) {
+  .text-container {
+    width: 60%;
+  }
+}

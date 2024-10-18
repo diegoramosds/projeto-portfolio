@@ -3,9 +3,8 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  z-index: 1;
   background-color: #282a3a6e;
-  height: 120vh;
+  min-height: 100%;
   color: #fff;
 }
 
@@ -20,12 +19,13 @@
 }
 
 .details-skills {
-width: 60vh;
-min-height: 90vh;
+width: 28vw;
+height: 630px;
 background-color: #21212bee;
 box-shadow: 2px 6px 8px 0px #00000023;
 position: relative;
-bottom: 17%;
+bottom: 100px;
+padding-top: 2em;
 border-radius: 15px;
 }
 
@@ -41,14 +41,12 @@ border-radius: 15px;
   margin-top: 6em;
   text-align: center;
  }
+ 
 .details-text {
 width: 60%;
 color:#e2e2e2da;
 text-align: center;
-position: relative;
-bottom: 22%;
-margin-top: 8em;
-margin-bottom: 7em;
+margin-bottom: 8em;
 }
   
 .information-skills {
@@ -61,31 +59,53 @@ margin-bottom: 7em;
 .information-skills ul{
  margin-top: 2em;
  }
- 
  .information-skills li{
-  color: #51c9cbd2;
-  background-color: #1c3c5e;
   text-align: center;
   list-style-type: none;
+  color: #fff;
   border: 1px solid #51c9cbd2;
   border-radius: 10px;
   margin: 10px;
   padding: 0 3px;
   }
-  .information-skills li:hover{
-   background-color: #1c3c5ec9;
-    }
-
-
-  @media screen and (max-width: 766px) {
-
-    @media (orientation: landscape)  {
-     
-  }
+  .information-skills li:hover,
+  .information-skills li:focus {
+  background-color: #1c3c5ec9;
+  outline-offset: 4px;
 }
 
-@media screen and (min-width: 767px) and (max-width: 1250px) {
+  @media screen and (max-width: 766px) {
+    .icons-container {
+      flex-direction: column;
+    }
+    .details-skills {
+      width: 75vw;
+      bottom: 50px;
+      }
+     
+    .details-text {
+      width: 90%;
+      font-size: .75em;
+      margin-bottom: 12em;
+      }
+
+    @media (orientation: landscape)  {
   
+  }
+  }
+
+@media screen and (min-width: 767px) and (max-width: 1250px) {
+  .details-skills {
+    width: 40vw;
+    bottom: 50px;
+    }
+   
+  .details-text {
+    width: 90%;
+    font-size: 1em;
+    margin-bottom: 12em;
+    }
+ 
 
   @media (orientation: landscape)  {
  

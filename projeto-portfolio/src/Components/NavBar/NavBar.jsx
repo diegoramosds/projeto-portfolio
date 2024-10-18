@@ -27,26 +27,31 @@ function Header() {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
     if (!isOpen) {
-      document.body.style.overflow = 'hidden'; // Remover rolagem
+      document.body.style.overflow = 'hidden'; // Remove rolagem
+      document.body.style.position = 'fixed';  // Impede rolagem por toque
     } else {
-      document.body.style.overflow = 'auto'; // Restaurar rolagem
+      document.body.style.overflow = 'auto';   // Restaura rolagem
+      document.body.style.position = 'relative';  // Permite rolagem por toque
     }
   };
+  
   const closeMenu = () => {
     setIsOpen(false);
-    document.body.style.overflowY = 'auto'; // Restaurar rolagem
-  };
+    document.body.style.overflow = 'auto';     // Restaura rolagem
+    document.body.style.position = 'relative'; // Permite rolagem por toque
+  }
   
     return (
 
       <div className="header-container">
          {isOpen && <div className="overlay" onClick={closeMenu}></div>}
-         <div className="hamburger" onClick={toggleMenu}>
-          &#9776; 
-        </div>
+
+         {isOpen ?  <div className="hamburger" onClick={toggleMenu}> X </div>
+         : <div className="hamburger" onClick={toggleMenu}>  &#9776;  </div>
+        }
         <div className={`overlay ${isOpen ? 'open' : ''}`} onClick={closeMenu}>
         <nav className={`nav-menu ${isOpen ? 'open' : ''}`}>
-        <span>D<strong className='important-name'>R</strong></span>
+        
         <a  onClick={scrollToSkills} className="custom-link skill">Habilidades</a>
         <a onClick={scrollToProjects} className="custom-link project">Projetos</a>
         <a onClick={scrollToContact} className="custom-link cont">Contato</a>

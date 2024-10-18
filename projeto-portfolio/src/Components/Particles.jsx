@@ -39,8 +39,8 @@ function Particles() {
 
 export default function ParticleBackground() {
   return (
-    <div style={{ position: 'absolute', width: '100%', height: '100%', zIndex: -1, 
-     background:  "linear-gradient(-20deg, #000 0%, #000 50%"}}>
+    <div style={{ position: 'absolute', width: '100%', height: '40%', zIndex: -1, 
+     background:  "linear-gradient(-20deg, #000 0%, #00050%"}}>
       <Canvas
         camera={{ position: [50, 50,1000], fov: 70 }}
         style={{ width: '100%', height: '100%' }}
