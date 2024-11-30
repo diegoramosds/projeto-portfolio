@@ -1,0 +1,15 @@
+.typing-effect {
+    font-family: monospace;
+    display: inline-block;
+    white-space: nowrap; 
+  }
+  
+  .cursor {
+    display: inline-block;
+    animation: blink 1s step-start infinite;
+  }
+  
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+  
