@@ -1,41 +1,54 @@
 import './Home.css';
 
 //Components
-import ParticleBackground from '../../Components/Particles';
-import TypingEffect from '../../Components/TypingEffect';
+import TypingEffect from '../../Components/Typing/TypingEffect';
 
 // Icons
 import { FaGithub, FaLinkedin, FaFileDownload } from 'react-icons/fa';
-import { HiOutlineDownload } from 'react-icons/hi';
+import ParticleBackground from '../../Components/Particles';
+import AnimatedIcon from '../../Components/Animation';
 
 function Home() {
-
   
+  function scrollToAbout() {
+    const skillsElement = document.getElementById('about');
+    skillsElement.scrollIntoView({ behavior: 'smooth' });
+  }
+
   return (
     <div className='main-home'>
-    <ParticleBackground />
-    
-      <p className='introduction'>Desenvolvedor &nbsp;<strong className='important-name'>Front-end</strong> </p>
+      <div className='particle'>
+        <ParticleBackground />
+      </div>
 
-      <div className='text-container'>
-        <p>
-        Como desenvolvedor web experiente, crio interfaces dinâmicas e 
-        interativas que encantam os usuários com layouts responsivos e estilos visualmente atraentes.
-        </p>
+      <div className='all-texts'>
+        <div className='text-container'>
+          <h1>Desenvolvedor &nbsp;<strong className='important-name'>Front-end</strong> </h1>
+          <p>Transformando ideias em experiências digitais</p>
+        </div>
+        <div className='typing'>
+          <h2><TypingEffect /></h2>
+        </div>
+        <div className='about-home about'>
+          <p onClick={scrollToAbout}>Saiba mais</p>
+        </div>
       </div>
-      <div className='typing'>
-        <h2><TypingEffect /></h2>
-      
-      </div>
+
       <div className='icons-about'>
-        <p><a href="https://github.com/diegoramosds"target="_blank"rel="noopener noreferrer">
-        <FaGithub title='Meu GitHub'/></a></p> 
 
-        <p><a href="https://www.linkedin.com/in/diego-rds/" target="_blank"rel="noopener noreferrer" >
-        <FaLinkedin title='Meu LinkedIn'/></a></p>
-
-        <p><a href="/cv-diego_ramos.pdf" target="_blank" rel="noopener noreferrer">
-        <FaFileDownload title='Baixar Curriculo'/></a></p>
+      <div className='animation'>
+        <p><AnimatedIcon /></p>
+      </div>
+      
+  
+        <div className='icons'>
+          <p><a href="https://github.com/diegoramosds"target="_blank"rel="noopener noreferrer" aria-label="Visite meu GitHub">
+          <FaGithub />Github</a></p>
+          <p><a href="https://www.linkedin.com/in/diego-rds/" target="_blank"rel="noopener noreferrer"  aria-label="Visite meu LinkedIn">
+          <FaLinkedin />LinkedIn</a></p>
+          <p><a href="/cv-diego_ramos.pdf" rel="noopener noreferrer" target="_blank"  aria-label="Baixar Curriculo">
+          <FaFileDownload />Curriculo</a></p>
+          </div>
         </div>
     </div>
     
