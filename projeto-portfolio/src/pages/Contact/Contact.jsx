@@ -6,7 +6,6 @@ import 'aos/dist/aos.css';
 
 import { useState } from 'react';
 import { FaSpinner } from 'react-icons/fa';
-import { GiGalaxy } from 'react-icons/gi';
 
 function Contact() {
 
@@ -51,11 +50,11 @@ function Contact() {
   return (
     <div className='envform' id='contact'>
       <h2>Entre em Contato</h2>
-      <p data-aos="fade-right">
+      <p>
         Se você tem alguma dúvida, sugestão ou apenas quer conversar sobre um novo projeto, estou à disposição!
         Vamos criar algo incrível juntos.
       </p>
-      <div className='id'>
+      <div>
         <form onSubmit={handleSubmit}>
           <label>
             Nome:
@@ -102,9 +101,6 @@ function Contact() {
             {error && <p className="error-message">{error}</p>}
           </div>
         </form>
-        <div className='image-contact' data-aos="fade-left">
-          <GiGalaxy />
-        </div>
       </div>
   
     </div>
