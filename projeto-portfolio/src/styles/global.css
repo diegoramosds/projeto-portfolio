@@ -2,31 +2,38 @@
   margin: 0;
   padding: 0;
 }
-
 html,body {
   overflow-x: hidden;
 }
 body {
   background: #000; 
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 h1,h2 {
-  color: #dfd696;
+  color: #51c9cbd2;
   text-align: center;
   height: 0;
 }
 h3 {
+  font-size: 1.3em;
   color: #51c9cbd2;
   margin-top: 1em;
 }
+h6 {
+  font-size: .9em;
+  color: #51c9cbd2;
+  margin-top: .5em;
+  padding: 5px;
+
+}
 .important-name {
-  color: #dfd696;
+  color: #51c9cbd2;
 }
 
 button {
   color: white;
-  background-color: #dfd696;
+  background-color: #51c9cbd2;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,9 +44,11 @@ button {
   font-size: 1.3em;
   border-radius: 10px;
   border: none;
+  transition: background-color 0.3s, color 0.3s;
 }
 button:hover {
- background-color:#dfd796da;
+  color: rgba(255, 255, 255, 0.719);
+ background-color:#51c9cb8f;
 }
 
 ::-webkit-scrollbar {
@@ -58,13 +67,39 @@ button:hover {
   background: #555;
 }
 
+.icon {
+  font-size: 3rem;
+  transition: transform 0.4s ease;
+}
+
+.rotate:active {
+  animation: rotateRight 0.4s ease forwards;
+}
+
+@keyframes rotateRight {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 
 @media screen and (max-width: 766px) {
   h1,h2 {
-  font-size: 1em;
+  font-size: 1.2em;
   }
   h3 {
-    font-size: .7em;
+    font-size: 1.3em;
+  }
+  h6 {
+    font-size: .8em;
+    color: #51c9cbd2;
+    margin-top: .5em;
   }
 
   button {
@@ -79,8 +114,7 @@ button:hover {
   }
 }
 @media screen and (min-width: 767px) and (max-width: 1250px) {
-
-    
+   
   @media (orientation: landscape) {
 
   }
