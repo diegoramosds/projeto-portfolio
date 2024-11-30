@@ -1,45 +1,90 @@
 .header-container {
-  position: relative;
-  height: 10vh;
+position: relative;
+height: 0;
+z-index: 2;
 }
-.header-container span{
-  display: flex;
-  font-weight: bold;
-  width: 0;
-  justify-content: left;
-  position: relative;
-  right: 25%;
-  align-items: baseline;
-  color:#e2e2e2;
-  font-size: 1em;
-}
-nav {
+.header-background {
+  width: 50%;
+  height: 0;
   display: flex;
   align-items: center;
-  gap: 50px;
-  justify-content: center;
+  justify-content: space-between;
+  position: relative;
+  top: 2em;
+  height: 50px;
+  border: 1px solid #e4e4e415;
+  background-color: #e4e4e415;
+  margin: 0 auto;
+  border-radius: 15px;
+  padding: 2px 20px;
+}
+.header-background p, .header-background svg{
+display: flex;
+font-size: 1.25em;
+align-items: center;
+justify-content: center;
+color: #e2e2e2da;
+gap: 15px;
+}
+.header-background svg{
+cursor: pointer;
+  }
+.header-background svg:hover{
+  color: #51c9cbd2;
+}
+
+
+nav {
+  display: flex;
+  gap: 60px;
 }
 
 .hamburger {
-  width: 10px;
-  display: none;
-  font-size: 24px;
+  display:flex;
+  align-items: center;
+  z-index: 2;
   cursor: pointer;
-  font-size: 1em;
-  margin-left: 10px;
-  color: white;
+  transition: transform 0.3s ease, scale 0.3s ease;
+}
+.hamburger p {
+  font-size: .6em;
 }
 
-.hamburger:hover {
-  color: #dfd696;
+.overlay {
+  position: fixed;
+  left: -100%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #0f0f13;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden; 
+  transition: left 0.3s ease, opacity 0.3s ease, visibility 0s 0.3s;
+}
+
+.overlay.open {
+  left: 0;
+  opacity: 1;
+  visibility: visible; 
+  transition: left 0.3s ease, opacity 0.3s ease;
+}
+
+
+.nav-menu.open {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 8em;
 }
 
 .custom-link{
-  margin: 20px;
+  margin: 10px;
   font-size: 1.1em;
   text-decoration: none;
   font-weight: 600;
-  color:#e2e2e2;
+  color:#e2e2e2da;
   position: relative;
 }
 
@@ -51,84 +96,44 @@ nav {
   width: 0;
   height: 0;
   display: block;
-  margin-top: 2px;
-  background:#dfd696;
+  margin-top: 0px;
+  background:#51c9cbd2;
   transition: width 0.1s ease-in-out;
   -webkit-transition: width 0.3s ease-in-out, transform 0.1s ease;
 }
 .skill:hover,
 .project:hover,
 .cont:hover {
-  color:#dfd696;
+  color:#51c9cbd2;
   font-weight: 600;
 } 
 
 .skill:hover::after {
   width: 70px;
-  height: 4px;
-  left: 3px;
+  height: 3px;
+  left: 1px;
   right: auto;
 }
 
 .project:hover::after {
   width: 50px;
-  height: 4px;
-  left: 3px;
+  height: 3px;
+  left: 1px;
   right: auto;
 }
 
 .cont:hover::after {
   width: 50px;
-  height: 4px;
-  left: 3px;
+  height: 3px;
+  left: 1px;
   right: auto;
 }
 
 
 @media screen and (max-width: 766px) {
-  .header-container {
-    position: relative;
-    top: 12px;
-    height: 0px;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
-  .nav-menu {
-    display: none;
-    height: 50vh;
-  }
-
-  .nav-menu.open {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .overlay {
-    display: none;
-    position: fixed;
-   
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.918); /* Fundo semi-transparente */
-    z-index: 1;
-    transition: opacity 0.3s ease;
-  }
-  .overlay.open {
-    display: block;
-    opacity: 1;
-  }
 
   .custom-link{
-    color: white;
-    margin: 10px;
-    font-size: 1em;
-    text-decoration: none;
-    font-weight: bold;
-    position: relative;
+  font-size: 1em;
   }
   .skill:hover::after {
     left: 2px;
@@ -139,35 +144,52 @@ nav {
   .cont:hover::after {
     left: 2px;
   }
+
+  .header-background {
+    top: 3em;
+    width: 85%;
+  }
+  
+  @media (orientation: landscape)  {
+    .nav-menu.open {
+      padding-top: 4em;
+      margin: 0;
+    }  
+    .custom-link {
+      margin: 0;
+    }
+    .header-background {
+      top: 1em;
+    }
+  }
 }
 
 @media screen and (min-width: 767px) and (max-width: 1250px) {
-  .header-container {
-    top: 6px;
-  }
-  nav {
-    height: 65px;
-    padding: 0.3em 1.3em;
-  }
-  .hamburger {
-    font-size: 24px;
-  }
 
   .custom-link{
     margin: 1.3em;
-    font-size: 1.3em;
+    font-size: 1em;
   }
 
-  
+  .header-background {
+    top: 5em;
+    width: 75%;
+  }
+ 
   @media (orientation: landscape) {
     .custom-link{
-      margin: 1.2.3em;
       font-size: 1em;
+      margin: 0;
     }
-    nav {
-      width: 100vw;
-      height: 52px;
-      padding: 0 1em;
+    .header-background {
+      top: 1em;
+      width: 65vw;
     }
+  
+    .nav-menu.open {
+      padding-top: 4em;
+      font-size: 1.1em;
+    } 
+   
   }
 }
