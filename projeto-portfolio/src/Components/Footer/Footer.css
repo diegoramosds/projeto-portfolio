@@ -1,26 +1,21 @@
 footer {
     text-align: center;
-    background-color: #282a3a8a;
+    background-color: #282a3a2f;
     padding: 1em;
-    color: white;
+    color: #e2e2e2da;
 }
-.icons-footer p {
+.icons-footer h2 {
   display: flex;
   flex-direction: column;
   font-size: 1em;
   font-weight: bold;
   margin: 3px;
-  margin-bottom: em;
-}
-
-.icons-footer span {
- color: #51c9cbd2;
- font-size: 1em;
+  margin-bottom: 2em;
 }
 
 .icons-footer a {
   color: #fff;
-  font-size: 1em;
+  font-size: 1.2em;
  }
 
 .icons-footer svg{
