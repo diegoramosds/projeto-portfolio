@@ -1,5 +1,3 @@
-
-
 import Skills from './pages/Skills/Skills'
 import NavBar  from './Components/NavBar/NavBar'
 import Projects from './pages/Projects/Projects'
