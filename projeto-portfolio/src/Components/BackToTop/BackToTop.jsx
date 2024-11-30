@@ -1,27 +1,21 @@
 import { FaArrowCircleUp } from 'react-icons/fa';
 import './BackToTop.css';
-
-
-
-import { useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 function BackToTop() {
+  const [isVisible, setIsVisible] = useState(false);
+  const arrowRef = useRef(null);
 
-  
   useEffect(() => {
     const handleScroll = () => {
-      var arrowTop = document.getElementById('arrow-top');
-      if (window.pageYOffset > 300) {
-        arrowTop.style.display = 'block';
-      } else {
-        arrowTop.style.display = 'none';
-      }
+      setIsVisible(window.pageYOffset > 300);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    const debounceScroll = debounce(handleScroll, 100);
 
+    window.addEventListener('scroll', debounceScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', debounceScroll);
     };
   }, []);
 
@@ -30,10 +24,23 @@ function BackToTop() {
   };
 
   return (
-    <>
-    <div id="arrow-top" onClick={scrollToTop}> <FaArrowCircleUp title='Voltar para o inicio' /></div>
-    </>
-  )
+    <div
+      ref={arrowRef}
+      id="arrow-top"
+      onClick={scrollToTop}
+      style={{ display: isVisible ? 'block' : 'none' }}
+      aria-label="Voltar para o início"
+    >
+      <FaArrowCircleUp title="Voltar para o início" />
+    </div>
+  );
+}
+function debounce(func, delay) {
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => func(...args), delay);
+  };
 }
 
 export default BackToTop;
