@@ -23,8 +23,10 @@ const AboutMe = () => {
         <div className='image-container'>
           <img src={profileImage} alt="Foto de perfil"/>
         </div>
+         <div className='journey-title'>
+         <h3>Minha jornada</h3>
+         </div>
          <div className='about-memory'>
-
            <div className='memory-details' data-aos="fade-right" >
            <h6>Meu Primeiro Contato com a Programação</h6>
 
