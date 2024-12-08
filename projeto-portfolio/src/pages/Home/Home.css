@@ -100,11 +100,23 @@ padding: 0 60px;
   color: #e2e2e2da;
   }
 
-
 .icons-about a:hover {
   color: #51c9cbd2;
 }
+.animation {
+  color: aqua;
+  font-size: 1.3em;
+  animation: spin 1.5s linear infinite;
+}
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+ 100% {
+    transform: rotate(360deg);
+ }
+}
 
 @media screen and (max-width: 321px) {
   .main-home {
@@ -112,7 +124,7 @@ padding: 0 60px;
     gap: 10px;
   }
   .text-container h1{
-    font-size: 1.4em;
+    font-size: 1.3em;
     margin-top: 6em;
 
    }
@@ -163,7 +175,7 @@ padding: 0 60px;
     gap: 0px;
   }
   .text-container h1{
-    font-size: 1.7em;
+    font-size: 1.6em;
     margin-top: 5em;
    }
    .text-container p{

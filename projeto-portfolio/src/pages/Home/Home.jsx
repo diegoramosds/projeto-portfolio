@@ -4,9 +4,8 @@ import './Home.css';
 import TypingEffect from '../../Components/Typing/TypingEffect';
 
 // Icons
-import { FaGithub, FaLinkedin, FaFileDownload } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaFileDownload, FaAtom } from 'react-icons/fa';
 import ParticleBackground from '../../Components/Particles';
-import AnimatedIcon from '../../Components/Animation';
 
 function Home() {
   
@@ -37,7 +36,7 @@ function Home() {
       <div className='icons-about'>
 
       <div className='animation'>
-        <p><AnimatedIcon /></p>
+       <FaAtom />
       </div>
       
   
