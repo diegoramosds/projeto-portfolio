@@ -33,13 +33,16 @@
     border-radius: 50%;
     background-size: cover;
 }
+.journey-title {
+    margin-top: 7em;
+}
 .about-memory {
 display: flex;
 justify-content: space-evenly;
 width: 62%;
 height: 19%;
 margin: 0 auto;
-margin-top: 11em;
+margin-top: 6em;
 gap: 30px; 
 }
 
