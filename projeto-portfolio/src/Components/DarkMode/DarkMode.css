@@ -38,6 +38,10 @@
   color:#282a3aec;
 }
 
+.dark-mode .animation {
+  color: #35797a;
+}
+
 /* about */
 
 .dark-mode .about-text  {
