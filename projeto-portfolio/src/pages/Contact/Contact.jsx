@@ -56,11 +56,8 @@ function Contact() {
       </p>
       <div>
         <form onSubmit={handleSubmit}>
-          <label>
-            Nome:
-          </label>
-          <FaEnvelope />
-          <input
+          <label>Nome:
+            <input
               type="text"
               required
               name="displayName"
@@ -69,6 +66,7 @@ function Contact() {
               value={name}
               disabled={loading}
             />
+          </label>
           <label>
             Email:
             <input
