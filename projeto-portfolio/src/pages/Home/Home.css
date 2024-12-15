@@ -138,7 +138,7 @@ padding: 0 60px;
     font-size: 1.2em;
   }
 
-  .animation, .particle {
+  .animation {
     display: none;
   }
   .icons-about {
@@ -165,7 +165,7 @@ padding: 0 60px;
 }
 
 @media screen and (max-width: 950px) and (orientation: landscape) {
-  .animation, .particle {
+  .animation {
     display: none;
   }
 }
@@ -188,7 +188,7 @@ padding: 0 60px;
     font-size: 1.3em;
   }
 
-  .animation, .particle {
+  .animation {
     display: none;
   }
   .icons-about {
