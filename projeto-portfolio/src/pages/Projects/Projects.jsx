@@ -40,11 +40,10 @@ function Projects() {
                 <li>Html e css</li>  
                 <li>Scss</li>  
               </ul>
-            
             <a href="https://github.com/diegoramosds/projeto-donitelas" target='blank'>Projeto completo Aqui</a>
             </div>
           </article>
-          <article className="img-item" data-aos="fade-right">
+          <article className="img-item" data-aos="fade-left">
             <img src={reactBlog} alt="Projeto-Blog" loading="lazy" />
             <div className='infodetails'>
             <h3>MiniBlog</h3>
@@ -81,7 +80,7 @@ function Projects() {
             
           </article>
 
-          <article className="img-item" data-aos="fade-right">
+          <article className="img-item" data-aos="fade-left">
             <img src={reactLoja} alt="Projeto-Loja" loading="lazy" />
             <div className='infodetails'>
             <h3>Redux Shopping</h3>
@@ -114,7 +113,7 @@ function Projects() {
             
           </article>
 
-          <article className="img-item" data-aos="fade-right">
+          <article className="img-item" data-aos="fade-left">
             <img src={reactAgenda} alt="Projeto-Agenda" loading="lazy" />
              
               <div className='infodetails'>
@@ -156,7 +155,7 @@ function Projects() {
           </article>
 
           
-          <article className="img-item" data-aos="fade-right">
+          <article className="img-item" data-aos="fade-left">
             <img src={reactInOrbit} alt="Projeto-InOrbit" loading="lazy" />
             <div className='infodetails'>
             <h3>In.Orbit</h3>
