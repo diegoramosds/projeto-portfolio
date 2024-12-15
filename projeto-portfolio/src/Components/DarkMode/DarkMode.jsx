@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { FaLightbulb, FaMoon } from 'react-icons/fa';
+import { FaCircleHalfStroke } from 'react-icons/fa6';
 import './DarkMode.css';
 
 const DarkMode = () => {
@@ -18,11 +18,7 @@ const DarkMode = () => {
 
   return (
     <div className="dark_mode" onClick={toggleDarkMode}>
-      {darkMode ? (
-        <FaMoon title="Modo claro" className="icon rotate" />
-      ) : (
-        <FaLightbulb title="Modo escuro" className="icon rotate" />
-      )}
+        <FaCircleHalfStroke title={darkMode ? "Modo escuro" : "Modo claro"} className="icon rotate" />
     </div>
   );
 };

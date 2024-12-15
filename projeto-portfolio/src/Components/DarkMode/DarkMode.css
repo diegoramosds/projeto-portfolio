@@ -11,13 +11,15 @@
 .dark-mode .about {
   color: #282a3aec;
 }
-.dark-mode .about:hover {
-  color: #35797a;
-}
 .dark-mode .about::after {
   background-color: #35797a;
 }
-
+.dark-mode .about:hover {
+  color: #35797a;
+}
+.dark-mode .about:hover::after {
+  background-color: #35797a;
+}
 .dark-mode .icons-about a{
   font-weight: 600 ;
   color: #282a3aec;
