@@ -13,7 +13,6 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-
 .all-texts {
   display: flex;
   flex-direction: column;
@@ -67,7 +66,7 @@
 .about:hover {
   color:#51c9cbd2;
   font-weight: 600;
-} 
+}
 .about:hover::after {
   background-color:#51c9cbd2;
   width: 68px;
@@ -78,12 +77,11 @@
 
 .icons-about {
 display: flex;
-justify-content: space-between;
+justify-content: flex-end;
 gap: 30px;
 margin-top: 8em;
 margin-right: 3em;
 padding: 0 60px;
-
 }
 
 .icons {
@@ -91,6 +89,19 @@ padding: 0 60px;
   align-items: center;
   gap: 30px;
 }
+.icons {
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: fadeInLeft 1s ease-in-out forwards;
+}
+
+@keyframes fadeInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 
 .icons-about a{
   display: flex;
@@ -98,6 +109,7 @@ padding: 0 60px;
   text-decoration: none;
   gap: 3px;
   color: #e2e2e2da;
+  font-weight: bolder;
   }
 
 .icons-about a:hover {
@@ -105,8 +117,10 @@ padding: 0 60px;
 }
 .animation {
   color: aqua;
-  font-size: 1.3em;
-  animation: spin 1.5s linear infinite;
+  font-size: 1em;
+  transform: translateX(-30px);
+
+  animation: spin 3s ease-in-out infinite;
 }
 
 @keyframes spin {
@@ -138,7 +152,7 @@ padding: 0 60px;
     font-size: 1.2em;
   }
 
-  .animation {
+  .animation, .particle {
     display: none;
   }
   .icons-about {
@@ -154,7 +168,6 @@ padding: 0 60px;
       gap: 0px;
     }
     .about {
-
       margin-top: 0em;
     }
     .icons-about {
@@ -165,7 +178,7 @@ padding: 0 60px;
 }
 
 @media screen and (max-width: 950px) and (orientation: landscape) {
-  .animation {
+  .animation, .particle {
     display: none;
   }
 }
@@ -175,20 +188,20 @@ padding: 0 60px;
     gap: 0px;
   }
   .text-container h1{
-    font-size: 1.6em;
-    margin-top: 5em;
-   }
-   .text-container p{
-    width: 90%;
     font-size: 1.7em;
+    margin-top: 5em;
+}
+.text-container p{
+    width: 90%;
+    font-size: 1.55em;
     margin-top: 2em;
-   }
+}
 
   .typing {
     font-size: 1.3em;
   }
 
-  .animation {
+  .animation, .particle {
     display: none;
   }
   .icons-about {
@@ -234,6 +247,9 @@ padding: 0 60px;
   .typing {
     font-size: 1.3em;
   }
+  .animation, .particle {
+    display: none;
+  }
 
   @media (orientation: landscape)  {
     .main-home {
@@ -263,6 +279,8 @@ padding: 0 60px;
       margin-top: 3em;
       margin-bottom: 1em;
       }
-
+      .animation, .particle {
+        display: none;
+      }
   }
 }

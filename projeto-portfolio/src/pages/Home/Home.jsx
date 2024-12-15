@@ -4,11 +4,10 @@ import './Home.css';
 import TypingEffect from '../../Components/Typing/TypingEffect';
 
 // Icons
-import { FaGithub, FaLinkedin, FaFileDownload, FaAtom } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaFileDownload } from 'react-icons/fa';
 import ParticleBackground from '../../Components/Particles';
 
 function Home() {
-  
   function scrollToAbout() {
     const skillsElement = document.getElementById('about');
     skillsElement.scrollIntoView({ behavior: 'smooth' });
@@ -32,14 +31,7 @@ function Home() {
           <p onClick={scrollToAbout}>Saiba mais</p>
         </div>
       </div>
-
       <div className='icons-about'>
-
-      <div className='animation'>
-       <FaAtom />
-      </div>
-      
-  
         <div className='icons'>
           <p><a href="https://github.com/diegoramosds"target="_blank"rel="noopener noreferrer" aria-label="Visite meu GitHub">
           <FaGithub />Github</a></p>
@@ -50,7 +42,6 @@ function Home() {
           </div>
         </div>
     </div>
-    
   );
 }
 

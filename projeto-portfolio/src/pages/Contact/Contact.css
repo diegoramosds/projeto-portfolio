@@ -25,7 +25,6 @@ form {
   margin-top: 6em;
   width: 40%;
   border-radius: 10px;
-  
 }
 
 
@@ -52,8 +51,12 @@ resize: none;
 }
 .envform input::placeholder, textarea::placeholder {
 text-align: center;
- color: #ffffffdc;
- font-size: 1.2em;
+color: #ffffffdc;
+font-size: 1.2em;
+}
+input:focus::placeholder, textarea:focus::placeholder {
+  color: transparent;
+  transition: color 0.3s ease;
 }
 .envform input:focus, textarea:focus {
 outline: none;
@@ -100,7 +103,7 @@ color: #c92121d2;
     margin:1.3em auto;
   }
   .envform input::placeholder, textarea::placeholder {
-   font-size: 1.1em;
+  font-size: 1.1em;
   }
 
 
@@ -108,12 +111,10 @@ color: #c92121d2;
     width: 80px;
   }
 
-  
   @media (orientation: landscape)  {
     form {
       width: 50vw;
       }
-  
       .envform input, textarea {
         width: 80%;
         box-sizing: border-box;
@@ -132,12 +133,10 @@ color: #c92121d2;
     width: 60%;
     margin:2.3em auto;
   }
-  
   .id {
     display: flex;
     justify-content: unset;
   }
-  
   .image-contact svg{
     margin-left: 5em;
     width: 170px;

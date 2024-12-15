@@ -5,7 +5,7 @@ import emailjs from '@emailjs/browser';
 import 'aos/dist/aos.css';
 
 import { useState } from 'react';
-import { FaEnvelope, FaSpinner } from 'react-icons/fa';
+import { FaSpinner } from 'react-icons/fa';
 
 function Contact() {
 
