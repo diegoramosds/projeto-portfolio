@@ -3,24 +3,13 @@ import './TypingEffect.css';
 
 const TypingEffect = () => {
   const [text, setText] = useState('');
-  const [phraseIndex, setPhraseIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
+  const [isCompleted, setIsCompleted] = useState(false); // Verifica se a digitação foi concluída
   const typingSpeed = 120;
-  const deletingSpeed = 80;
-  const pauseBetweenPhrases = 300;
   const isMounted = useRef(true);
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const phrases = [
-    "Desenvolvedor",
-    "Front-end",
-    "JavaScript",
-    "React",
-    "HTML e CSS",
-    "Design Responsivo",
-    "Git",
-    "GitHub",
-    "Criador de Experiências",
+    "Bem-vindo ao meu portfólio",
   ];
 
   useEffect(() => {
@@ -31,35 +20,26 @@ const TypingEffect = () => {
   }, []);
 
   useEffect(() => {
-    const currentPhrase = phrases[phraseIndex];
+    if (isCompleted) return; 
+    const currentPhrase = phrases[0];
     let timeout;
 
     const updateText = () => {
       if (!isMounted.current) return;
 
-      if (isDeleting) {
-        setText((prev) => prev.slice(0, -1));
+      setText((prev) => currentPhrase.slice(0, prev.length + 1));
 
-        if (text === '') {
-          setIsDeleting(false);
-          setPhraseIndex((prev) => (prev + 1) % phrases.length);
-        }
-      } else {
-        setText((prev) => currentPhrase.slice(0, prev.length + 1));
-
-        if (text === currentPhrase) {
-          timeout = setTimeout(() => setIsDeleting(true), pauseBetweenPhrases);
-          return;
-        }
+      if (text === currentPhrase) {
+        setIsCompleted(true); 
       }
 
-      timeout = setTimeout(updateText, isDeleting ? deletingSpeed : typingSpeed);
+      timeout = setTimeout(updateText, typingSpeed);
     };
 
-    timeout = setTimeout(updateText, isDeleting ? deletingSpeed : typingSpeed);
+    timeout = setTimeout(updateText, typingSpeed);
 
     return () => clearTimeout(timeout);
-  }, [text, isDeleting, phraseIndex, phrases]);
+  }, [text, isCompleted, phrases]);
 
   return (
     <div className="typing-effect" translate="no">
