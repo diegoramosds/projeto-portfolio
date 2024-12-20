@@ -14,13 +14,13 @@ function Particles() {
           starsRef.current.attributes.position.needsUpdate = true;
         }
       });
-    
+
       const stars = new Array(1000).fill().map(() => [
         (Math.random() * 2 - 1) * 900,
         (Math.random() * 3 - 1) * 900,
         (Math.random() * 3 - 1) * 900
       ]);
-    
+
       return (
         <points>
           <bufferGeometry ref={starsRef}>
@@ -31,15 +31,14 @@ function Particles() {
               itemSize={3}
             />
           </bufferGeometry>
-          <pointsMaterial color="#535353" size={1.3} sizeAttenuation={false}/>
+          <pointsMaterial color="#535353" size={1.5} sizeAttenuation={false}/>
         </points>
       );
     }
 
 export default function ParticleBackground() {
   return (
-    <div style={{ position: 'absolute', width: '100%', height: '600px', zIndex: -10,
-
+    <div style={{ position: 'absolute', width: '100%', height: '80%', zIndex: -10,
      background:  "linear-gradient(-10deg, #000 0%, #00050%"}}>
       <Canvas
         camera={{ position: [50, 50,1000], fov: 70 }}
