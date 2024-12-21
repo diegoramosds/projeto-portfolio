@@ -1,13 +1,39 @@
 /* Navbar */
-  .dark-mode .header-background {
-    border: 1px solid #282a3ada;
-    background-color: #212330d0;
+  .dark-mode .contact a {
+  border: 2px solid #282a3aec;
+  color: #282a3aec;
   }
+  .dark-mode .contact a:hover {
+    border: 2px solid  #35797ae7;;
+    color: #35797ae7;
+    }
+  .dark-mode .custom-link {
+  color: #282a3aec;
+  }
+  .dark-mode .custom-link:hover {
+    color: #35797ae7;
+   }
+   .dark-mode .header-background svg {
+    color: #282a3aec;
+   }
+   .dark-mode .header-background svg:hover {
+    color: #35797ae7;
+   }
+
 /* home */
 .dark-mode .main-home {
   background-color: #ffffffd3;
 }
-
+.dark-mode .skill::after,
+.dark-mode .project::after,
+.dark-mode .cont::after {
+  background: #35797a;
+}
+.dark-mode .skill:hover,
+.dark-mode .project:hover,
+.dark-mode .cont:hover {
+  color: #35797ae7;
+}
 .dark-mode .about {
   color: #282a3aec;
 }
@@ -15,18 +41,21 @@
   background-color: #35797a;
 }
 .dark-mode .about:hover {
-  color: #35797a;
+  color: #35797ae7;
 }
 .dark-mode .about:hover::after {
   background-color: #35797a;
 }
 .dark-mode .icons-about a{
   font-weight: 600 ;
+  border: 1px solid #282a3aec;
   color: #282a3aec;
 }
 
 .dark-mode .icons-about a:hover{
   color: #35797a;
+  border: 1px solid #35797ae7;
+  ;
 }
 .dark-mode .important-name {
   color: #35797a;
@@ -44,6 +73,13 @@
   color: #35797a;
 }
 
+.dark-mode .go-down {
+  color: #35797a;
+
+}
+.dark-mode .go-down:hover {
+  color: #35797ae7;
+}
 /* about */
 
 .dark-mode .about-text  {
@@ -80,11 +116,11 @@
   }
   
 .dark-mode .card {
-  background-color: #000000b6;
+  background-color: #00000093;
 
 }
 .dark-mode .card:hover {
-  background-color: #000000bb;
+  background-color: #0000008f;
 
 }
 .dark-mode .details-text {
@@ -99,10 +135,10 @@
 } 
 .dark-mode  .img-item {
   border: 1px solid #e4e4e415;
-  background-color: #000000b4;
+  background-color: #00000093;
 }
 .dark-mode .img-item:hover {
-  background-color: #000000b6;
+  background-color: #0000008f;
 
 }
 
@@ -183,4 +219,10 @@ background-color: #35797ae7;
 }
 .dark-mode h6 {
   color: #35797a;
+}
+
+@media screen and (max-width: 766px) {
+ .dark-mode .custom-link {
+  color: #35797a;
+ }
 }

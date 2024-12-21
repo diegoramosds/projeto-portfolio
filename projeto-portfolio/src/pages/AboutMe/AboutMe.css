@@ -4,7 +4,7 @@
     background-color: #282a3a3a;
     text-align: center;
     color:#e0e0e0;
-} 
+}
 .text-details {
     margin: 0 auto;
     padding-top: 5em;
@@ -17,7 +17,7 @@
 }
 .image-container {
     display: flex;
-    width: 170px;
+    width: 180px;
     margin: 0 auto;
     margin-top: 6em;
     justify-content: center;
@@ -34,7 +34,7 @@
     background-size: cover;
 }
 .journey-title {
-    margin-top: 10em;
+    margin-top: 12em;
 }
 .about-memory {
 display: flex;
@@ -84,9 +84,7 @@ line-height: 1.6em;
   }
   
   .memory-details:last-child::after {
-    display: none;
-  }
-
+    display: none;}
  .about-text a {
     position: relative;
     top: 7em;
@@ -113,7 +111,7 @@ line-height: 1.6em;
         width: 92%;
     }
     .text-details p{
-       font-size: .8em;
+       font-size: .9em;
     }
     .image-container {
         width: 120px;
@@ -130,7 +128,7 @@ line-height: 1.6em;
         height: 50%;
         margin: 0 auto;
         align-items: center;
-        margin-top: 7em;
+        margin-top: 1em;
         gap: 0px;
         }
     .memory-details {
@@ -141,10 +139,9 @@ line-height: 1.6em;
         }
 
         .memory-details p{
-        font-size:.7em;
+        font-size:.75em;
         max-width: 92%;
         }
-
         .memory-details::after {
             content: "";
             left:50%; 
@@ -155,33 +152,27 @@ line-height: 1.6em;
         }
 
         .about-text a {
-            top: 4em;
+            top: 3em;
         }
 
-        
     @media (orientation: landscape) {
-        
-    }
-  }
-  @media screen and (min-width: 767px) and (max-width: 1250px) {
+
+    }}
+    @media screen and (min-width: 767px) and (max-width: 1250px) {
     .about-text  {
         width: 100%;
         text-align: center;
         color:#e0e0e0;
-    } 
-    .text-details {   
+    }
+    .text-details {
         width: 70%;
     }
     .about-memory {
         width: 90%;
         }
-        
     .memory-details {
-        
         width: 50%;
         position: relative;
         }
-  
     @media (orientation: landscape)  {
-   
-  }}
+}}

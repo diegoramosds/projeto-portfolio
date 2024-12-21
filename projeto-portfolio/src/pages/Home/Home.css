@@ -13,86 +13,40 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.all-texts {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.text-container h1{
+  color: #e2e2e2da;
+  font-size: 2.9em;
+  margin-top: 3.5em;
 }
- .text-container h1{
+.text-container p{
   color: #e2e2e2da;
-  font-size: 2.7em;
-  margin-top: 3em;
- }
-
- .text-container p{
-  color: #e2e2e2da;
+  font-size: 1.8em;
   margin: 0 auto;
-  font-size: 1.5em;
   margin-top: 3em;
- }
-
-.typing {
-  margin-top: 1em;
-  font-size: 1.2em;
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: fadeInLeft 1.5s ease-in-out forwards;
 }
-
 .about-home {
   position: relative;
-  margin-top: 9em;
   font-weight: bold;
   cursor: pointer;
-  font-size: 1em;
+  font-size: 1.2em;
+  margin-top: 5em;
 }
-
-
-.about::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 0;
-  display: block;
-  margin-top: 0px;
-  background-color:#e2e2e2da;
-  transition: width 0.1s ease-in-out;
-  -webkit-transition: width 0.3s ease-in-out, transform 0.1s ease;
-}
-.about::after {
-  width: 30px;
-  height: 2px;
-  left: 1px;
-  right: auto;
-}
-
-.about:hover {
-  color:#51c9cbd2;
-  font-weight: 600;
-}
-.about:hover::after {
-  background-color:#51c9cbd2;
-  width: 68px;
-  height: 2px;
-  left: 1px;
-  right: auto;
+.icons-about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3em;
+  margin-top: 2em;
+  gap: 30px;
 }
 
 .icons-about {
-display: flex;
-justify-content: flex-end;
-gap: 30px;
-margin-top: 8em;
-margin-right: 3em;
-padding: 0 60px;
-}
-
-.icons {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-.icons {
   opacity: 0;
   transform: translateX(-30px);
-  animation: fadeInLeft 1s ease-in-out forwards;
+  animation: fadeInLeft 1.5s ease-in-out forwards;
 }
 
 @keyframes fadeInLeft {
@@ -101,186 +55,124 @@ padding: 0 60px;
     transform: translateX(0);
   }
 }
-
-
 .icons-about a{
   display: flex;
   align-items: center;
-  text-decoration: none;
-  gap: 3px;
   color: #e2e2e2da;
-  font-weight: bolder;
+  border-radius: 20px;
+  border: 1px solid #e2e2e2da;
+  padding: .3em .3em;
   }
-
 .icons-about a:hover {
   color: #51c9cbd2;
-}
-.animation {
-  color: aqua;
-  font-size: 1em;
-  transform: translateX(-30px);
-
-  animation: spin 3s ease-in-out infinite;
+  border: 1px solid #51c9cbd2;
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
+.go-down {
+  margin-top: 4em;
+  font-size: 1.4em;
+  cursor: pointer;
+  opacity: 0.4;
+  transform: translateY(-3px);
+  animation: fadeInDown 2s ease-out infinite;
+}
+
+@keyframes fadeInDown {
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
- 100% {
-    transform: rotate(360deg);
- }
 }
 
+.go-down:hover {
+  color: #51c9cbd2;
+}
 @media screen and (max-width: 321px) {
-  .main-home {
-    min-height: 500px;
-    gap: 10px;
-  }
   .text-container h1{
-    font-size: 1.3em;
-    margin-top: 6em;
-
-   }
-   .text-container p{
-    font-size: 1.2em;
-    margin-top: 2em;
-
-  }
-
-  .typing {
-    font-size: 1.2em;
-  }
-
-  .animation, .particle {
-    display: none;
+    font-size: 2.2em;
+    margin-top: 3em;
+}
+  .text-container p{
+    font-size: 1.4em;
+    margin-top: 3em;
   }
   .icons-about {
     justify-content: center;
-    gap: 30px;
-    margin-top: 8em;
+    margin-top: 2em;
     margin-right: 0;
     }
-
-  @media (orientation: landscape)  {
-
-    .main-home {
-      gap: 0px;
-    }
-    .about {
-      margin-top: 0em;
-    }
-    .icons-about {
-      margin-top: 3em;
-      }
-
-  }
-}
-
-@media screen and (max-width: 950px) and (orientation: landscape) {
-  .animation, .particle {
-    display: none;
-  }
 }
 
 @media screen and (min-width: 322px) and (max-width: 766px) {
   .main-home {
     gap: 0px;
   }
+
   .text-container h1{
-    font-size: 1.7em;
-    margin-top: 5em;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 2.3em;
+    margin-top: 0;
 }
 .text-container p{
-    width: 90%;
-    font-size: 1.55em;
-    margin-top: 2em;
+    font-size: 1.5em;
+    margin-top: 2.5em;
 }
 
-  .typing {
-    font-size: 1.3em;
+  .icons-about {
+    justify-content: center;
+    margin-top: 2em;
+    margin-right: 0;
+    padding: 0;
+    }
+@media screen and (orientation: landscape) {
+    .main-home {
+      gap: 10px;
+    }
+    .text-container h1{
+      font-size: 2.4em;
+      margin-top:3em;
+}
+.text-container p {
+  margin-top: 3em;
+  font-size: 1.4em;
+}
   }
-
-  .animation, .particle {
-    display: none;
+}
+@media screen and (min-width: 767px) and (max-width: 1250px) {
+  .main-home {
+    gap: 15px;
   }
+  .text-container h1{
+    color: #e2e2e2da;
+    font-size: 2.9em;
+}
+  .text-container p{
+    font-size: 1.8em;
+}
   .icons-about {
     justify-content: center;
     margin-right: 0;
     padding: 0;
     }
-    
-  @media screen and (orientation: landscape) {
-    .main-home {
-      gap: 10px;
+    .icons-about a {
+      font-size: 1.4em;
+      margin: .8em;
+      padding: .22em .2em;
     }
-    .text-container h1{
-      font-size: 1.6em;
-      margin-top: 4em;
-     }  
-     
-     .about {
-      margin-top: 5em;
+    @media screen and (orientation: landscape) {
+      .text-container h1{
+        margin-top: 3em;
+        color: #e2e2e2da;
+        font-size: 2.8em;
     }
-  }
-}
-
-@media screen and (min-width: 767px) and (max-width: 1250px) {
-  .main-home { 
-    gap: 15px;
-  }
-  .text-container {
-    width: 70%;
-  }
-
-  .text-container h1{
-    color: #e2e2e2da;
-    font-size: 2.5em;
-    margin-top: 4em;
-   }
-   
-  .text-container p{
-    font-size: 2em;
-    width: 70%;
-   }
-
-  .typing {
-    font-size: 1.3em;
-  }
-  .animation, .particle {
-    display: none;
-  }
-
-  @media (orientation: landscape)  {
-    .main-home {
-      gap: 5px;
+      .text-container p{
+        font-size: 1.8em;
+        margin-top: 3em;
     }
-    .about {
-      margin-top: 6em;
-    }
-
-    .text-container h1{
-      font-size: 1.9em;
-      margin-top: 5em;
-     }
-     .text-container p{
-      width: 60%;
-      font-size: 1.9em;
-      margin-top: 2em;
-     }
-
-    .typing {
-      font-size: 1.2em;
-    }
-
-    .icons-about {
-      justify-content: center;
-      margin-right: 0; 
-      margin-top: 3em;
-      margin-bottom: 1em;
-      }
-      .animation, .particle {
-        display: none;
-      }
+      .icons-about {
+        margin-top: 1em;
+        font-size: 1.1em;
+        }
   }
 }
