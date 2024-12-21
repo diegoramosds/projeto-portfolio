@@ -6,6 +6,11 @@ import DarkMode from '../DarkMode/DarkMode';
 
 
 function Header() {
+  function scrollToAbout() {
+    closeMenu();
+    const skillsElement = document.getElementById('about');
+    skillsElement.scrollIntoView({ behavior: 'smooth' });
+  }
   function scrollToSkills() {
     closeMenu();
     const skillsElement = document.getElementById('skills');
@@ -22,7 +27,6 @@ function Header() {
     const skillsElement = document.getElementById('contact');
     skillsElement.scrollIntoView({ behavior: 'smooth' });
   }
-
   const [isOpen, setIsOpen] = useState(false);
   
   const toggleMenu = () => {
@@ -46,27 +50,33 @@ function Header() {
 
       <div className="header-container">
         <div className='header-background'>
-         <p><span><DarkMode/></span><strong className='important-name'>DR</strong></p>
-         
+         <div className='darkmode-container'>
+          <DarkMode/>
+           <p>
+            <strong className='important-name'>DR</strong>
+            </p>
+         </div>
+
           {isOpen && <div className="overlay" onClick={closeMenu}></div>}
 
-          {isOpen ?  <div className="hamburger" onClick={toggleMenu}><FaTimes className="icon rotate"/> </div>
-          : <div className="hamburger" onClick={toggleMenu}><FaBars className="icon rotate"/> </div>
+          {!isOpen && <div className="hamburger" onClick={toggleMenu}>
+          <FaBars className="icon rotate"/> </div>
           }
-      
+          
           <div className={`overlay ${isOpen ? 'open' : ''}`} onClick={closeMenu}>
-            <nav className={`nav-menu ${isOpen ? 'open' : ''}`}>
+          <div className="hamburger close-modal" onClick={toggleMenu}>
+          <FaTimes className="icon rotate"/> </div>
+            <nav>
+            <a onClick={scrollToAbout} className="custom-link cont">Sobre</a>
             <a  onClick={scrollToSkills} className="custom-link skill">Habilidades</a>
             <a onClick={scrollToProjects} className="custom-link project">Projetos</a>
-            <a onClick={scrollToContact} className="custom-link cont">Contato</a>
+            <a onClick={scrollToContact} className="custom-link mobile-contact">Entre em Contato</a>
             </nav>
           </div>
+          <div className="contact">
+            <a onClick={scrollToContact}>Entre em Contato</a>
+          </div>
         </div>
- 
-      </div>
-      
-    );
-  }
-  
-  export default Header;
-  
+    </div>
+    );}
+export default Header;

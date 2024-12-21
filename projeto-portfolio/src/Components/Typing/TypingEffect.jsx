@@ -3,13 +3,13 @@ import './TypingEffect.css';
 
 const TypingEffect = () => {
   const [text, setText] = useState('');
-  const [isCompleted, setIsCompleted] = useState(false); // Verifica se a digitação foi concluída
-  const typingSpeed = 120;
+  const [isCompleted, setIsCompleted] = useState(false);
+  const typingSpeed = 60;
   const isMounted = useRef(true);
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const phrases = [
-    "Bem-vindo ao meu portfólio",
+    "Olá me chamo Diego",
   ];
 
   useEffect(() => {
@@ -20,7 +20,7 @@ const TypingEffect = () => {
   }, []);
 
   useEffect(() => {
-    if (isCompleted) return; 
+    if (isCompleted) return;
     const currentPhrase = phrases[0];
     let timeout;
 
@@ -42,9 +42,9 @@ const TypingEffect = () => {
   }, [text, isCompleted, phrases]);
 
   return (
-    <div className="typing-effect" translate="no">
+    <div className="typing-effect">
       <span>{text}</span>
-      <span className="cursor">|</span>
+      <span className="cursor" ></span>
     </div>
   );
 };

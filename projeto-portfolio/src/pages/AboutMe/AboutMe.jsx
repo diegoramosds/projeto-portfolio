@@ -9,21 +9,17 @@ const AboutMe = () => {
   return (
     <div className='about-text' id='about'>
       <div className='text-details' data-aos="fade-right">
-      <h2><span>&lt;&gt;</span>Olá, Me chamo DIEGO!<span>&lt;/&gt;</span></h2>
+      <h2><span>&lt;&gt;</span>Sobre mim<span>&lt;/&gt;</span></h2>
         <p>Atualmente, estou me aprofundando no desenvolvimento <strong className='important-name'> Front-end</strong>, com foco em práticas 
           modernas e consumo de <strong className='important-name'> APIs </strong> para criar interfaces dinâmicas e interativas. Estou cursando 
           <strong className='important-name'> Análise e Desenvolvimento de Sistemas </strong> , o que tem sido uma ótima oportunidade para construir 
           uma base sólida em programação e estrutura de dados, além de explorar aspectos fundamentais 
-          do <strong className='important-name'>desenvolvimento de software</strong>. Paralelamente, tenho aproveitado diversos recursos e
-          <strong className='important-name'> cursos online</strong>,
-           que me permitem explorar novas tecnologias, <strong className='important-name'>frameworks </strong> 
-          e técnicas avançadas, expandindo 
-          constantemente meus conhecimentos e aprimorando minhas habilidades na área.</p>
+          do <strong className='important-name'>desenvolvimento de software</strong>.</p>
       </div>
         <div className='image-container'>
           <img src={profileImage} alt="Foto de perfil"/>
         </div>
-         <div className='journey-title'>
+         <div className='journey-title' data-aos="fade-up">
          <h3>Minha jornada</h3>
          </div>
          <div className='about-memory'>

@@ -1,6 +1,6 @@
 import './Footer.css';
 
-import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 
 
@@ -24,11 +24,6 @@ const Footer = () => {
             target="_blank" rel="noopener noreferrer"
             aria-label="Mande um email">
               <MdEmail/></a>
-
-              <a href="https://www.instagram.com/_diegoo_66/" 
-              target="_blank" rel="noopener noreferrer"
-               aria-label="Visite meu Instagram">
-                <FaInstagram/></a>
       </div>
          <h3>Portfólio Dev!</h3>
          <p>Diego Ramos &copy; 2024</p>

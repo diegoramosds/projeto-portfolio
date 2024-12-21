@@ -57,7 +57,7 @@ function Projects() {
                 <li>axios</li>  
               </ul>
             
-            <a href="https://github.com/diegoramosds/projeto-blog" target='blank'>Projeto completo Aqui</a>
+            <a href="https://github.com/diegoramosds/projeto-blog" rel="preload" target='blank'>Projeto completo Aqui</a>
             </div>
           </article>
 
@@ -75,7 +75,7 @@ function Projects() {
               <li>TypeScript</li>
               <li>SQLite</li>
             </ul>
-            <a href="https://github.com/diegoramosds/projeto-loja" target='blank'>Projeto completo Aqui</a>
+            <a href="https://github.com/diegoramosds/projeto-loja" rel="preload" target='blank'>Projeto completo Aqui</a>
             </div>
             
           </article>
@@ -92,7 +92,7 @@ function Projects() {
               <li>Tailwind CSS</li>
               <li>TypeScript</li>
             </ul>
-            <a href="https://github.com/diegoramosds/projeto-loja" target='blank'>Projeto completo Aqui</a>
+            <a href="https://github.com/diegoramosds/projeto-loja" rel="preload" target='blank'>Projeto completo Aqui</a>
             </div>
             
           </article>
@@ -108,13 +108,13 @@ function Projects() {
               <li>React</li>
               <li>Node</li>
             </ul>
-            <a href="https://github.com/diegoramosds/projeto-alunos" target='blank'>Projeto completo Aqui </a>
+            <a href="https://github.com/diegoramosds/projeto-alunos" rel="preload" target='blank'>Projeto completo Aqui </a>
             </div>
             
           </article>
 
           <article className="img-item" data-aos="fade-left">
-            <img src={reactAgenda} alt="Projeto-Agenda" loading="lazy" />
+            <img src={reactAgenda} alt="Projeto-Agenda" rel="preload" loading="lazy" />
              
               <div className='infodetails'>
               <h3>Agenda de Contatos</h3>
@@ -128,7 +128,7 @@ function Projects() {
                 <li>MONGODB</li>
                 <li>EJS</li>
               </ul>
-              <a href="https://github.com/diegoramosds/projeto-agenda" target='blank'>Projeto completo Aqui</a>
+              <a href="https://github.com/diegoramosds/projeto-agenda" rel="preload" target='blank'>Projeto completo Aqui</a>
               </div>
               
           </article>
@@ -149,7 +149,7 @@ function Projects() {
               <li>Vite</li>
               <li>Lucide React</li>
             </ul>
-            <a href="https://github.com/diegoramosds/projeto-participantes" target='blank'>Projeto completo Aqui</a>
+            <a href="https://github.com/diegoramosds/projeto-participantes" rel="preload" target='blank'>Projeto completo Aqui</a>
             </div>
             
           </article>
@@ -167,7 +167,7 @@ function Projects() {
               <li>PostgreSQL</li>
               <li>Node</li>
             </ul>
-            <a href="https://github.com/diegoramosds/projeto-in.orbit" target='blank'>Projeto completo Aqui </a>
+            <a href="https://github.com/diegoramosds/projeto-in.orbit" rel="preload" target='blank'>Projeto completo Aqui </a>
             </div>
           </article>
 
@@ -176,8 +176,8 @@ function Projects() {
             <div className='infodetails'>
             <h3>SecretWord</h3>
               <p>Jogo, onde o jogador deve descobrir
-                 uma palavra secreta com base em uma dica de categoria.
-                 verifica letras adivinhadas, controla tentativas e permite reiniciar após o término</p>
+            uma palavra secreta com base em uma dica de categoria.
+            verifica letras adivinhadas, controla tentativas e permite reiniciar após o término</p>
             <ul>
               <li>JavaScript</li>
               <li>React</li>
@@ -185,7 +185,7 @@ function Projects() {
               <li>CSS</li>
 
             </ul>
-            <a href="https://github.com/diegoramosds/projeto-secret_word" target='blank'>Projeto completo Aqui </a>
+            <a href="https://github.com/diegoramosds/projeto-secret_word" rel="preload" target='blank'>Projeto completo Aqui </a>
             </div>
           </article>
         </div>

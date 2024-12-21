@@ -5,43 +5,37 @@ import TypingEffect from '../../Components/Typing/TypingEffect';
 
 // Icons
 import { FaGithub, FaLinkedin, FaFileDownload } from 'react-icons/fa';
+import { HiChevronDoubleDown } from "react-icons/hi";
 import ParticleBackground from '../../Components/Particles';
 
+function scrollToAbout() {
+  const goDown = document.getElementById('about');
+  goDown.scrollIntoView({behavior: "smooth"})
+}
+
 function Home() {
-  function scrollToAbout() {
-    const skillsElement = document.getElementById('about');
-    skillsElement.scrollIntoView({ behavior: 'smooth' });
-  }
 
   return (
     <div className='main-home'>
-      <div className='particle'>
-        <ParticleBackground />
-      </div>
-
-      <div className='all-texts'>
+      <ParticleBackground />
         <div className='text-container'>
-          <h1>Desenvolvedor &nbsp;<strong className='important-name'>Front-end</strong> </h1>
-          <p>Transformando ideias em experiências digitais</p>
+        <h1><TypingEffect /></h1>
+        <p>Desenvolvedor <span className='important-name'>Front-end</span></p>
         </div>
-        <div className='typing'>
-          <h2><TypingEffect /></h2>
-        </div>
-        <div className='about-home about'>
-          <p onClick={scrollToAbout}>Saiba mais</p>
-        </div>
-      </div>
+
       <div className='icons-about'>
-        <div className='icons'>
-          <p><a href="https://github.com/diegoramosds"target="_blank"rel="noopener noreferrer" aria-label="Visite meu GitHub">
-          <FaGithub />Github</a></p>
-          <p><a href="https://www.linkedin.com/in/diego-rds/" target="_blank"rel="noopener noreferrer"  aria-label="Visite meu LinkedIn">
-          <FaLinkedin />LinkedIn</a></p>
-          <p><a href="/cv-diego_ramos.pdf" rel="noopener noreferrer" target="_blank"  aria-label="Baixar Curriculo">
-          <FaFileDownload />Curriculo</a></p>
-          </div>
-        </div>
-    </div>
+          <p><a href="https://github.com/diegoramosds"target="_blank" rel="preload" aria-label="Visite meu GitHub">
+          <FaGithub title='Acessar github'/></a></p>
+          <p><a href="https://www.linkedin.com/in/diego-rds/" target="_blank" rel="preload"  aria-label="Visite meu LinkedIn">
+          <FaLinkedin title='Acessar LinkedIn'/></a></p>
+          <p><a href="/cv-diego_ramos.pdf" rel="preload" target="_blank"  aria-label="Baixar Curriculo">
+          <FaFileDownload title='Acessar Curriculo'/></a></p>
+      </div>
+       <div className='go-down'>
+       <HiChevronDoubleDown onClick={scrollToAbout}/>
+       </div>
+      </div>
+      
   );
 }
 
