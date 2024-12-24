@@ -60,7 +60,7 @@
   align-items: center;
   color: #e2e2e2da;
   border-radius: 20px;
-  border: 1px solid #e2e2e2da;
+  border: 1px solid #51c9cbd2;
   padding: .3em .3em;
   }
 .icons-about a:hover {
@@ -69,6 +69,8 @@
 }
 
 .go-down {
+  width: 0;
+  margin: 0 auto;
   margin-top: 4em;
   font-size: 1.4em;
   cursor: pointer;
