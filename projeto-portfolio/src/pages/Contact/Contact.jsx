@@ -4,8 +4,14 @@ import emailjs from '@emailjs/browser';
 
 import 'aos/dist/aos.css';
 
+//icons
 import { useState } from 'react';
 import { FaSpinner } from 'react-icons/fa';
+
+//image
+import Bgcontact from '../../img/bg-contact2.png'
+
+
 
 function Contact() {
 
@@ -54,7 +60,10 @@ function Contact() {
         Se você tem alguma dúvida, sugestão ou apenas quer conversar sobre um novo projeto, estou à disposição!
         Vamos criar algo incrível juntos.
       </p>
-      <div>
+      <div className='main-contact'>
+      <div className='image-contact'>
+            <img src={Bgcontact} alt="" />
+        </div>
         <form onSubmit={handleSubmit}>
           <label>Nome:
             <input
@@ -100,6 +109,7 @@ function Contact() {
             {error && <p className="error-message">{error}</p>}
           </div>
         </form>
+       
       </div>
   
     </div>
