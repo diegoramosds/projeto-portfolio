@@ -1,50 +1,34 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import './TypingEffect.css';
 
 const TypingEffect = () => {
   const [text, setText] = useState('');
-  const [isCompleted, setIsCompleted] = useState(false);
-  const typingSpeed = 60;
-  const isMounted = useRef(true);
-
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const phrases = [
-    "Olá me chamo Diego",
-  ];
+  const phrase = "Olá me chamo Diego";
 
   useEffect(() => {
-    isMounted.current = true;
-    return () => {
-      isMounted.current = false;
-    };
-  }, []);
+    let index = 0;
+    let lastTime = 0;
 
-  useEffect(() => {
-    if (isCompleted) return;
-    const currentPhrase = phrases[0];
-    let timeout;
-
-    const updateText = () => {
-      if (!isMounted.current) return;
-
-      setText((prev) => currentPhrase.slice(0, prev.length + 1));
-
-      if (text === currentPhrase) {
-        setIsCompleted(true); 
+    const typeText = (timestamp) => {
+      if (timestamp - lastTime > 60) { // Controla a fluidez (ajuste o valor "50")
+        setText(phrase.slice(0, index + 1));
+        index++;
+        lastTime = timestamp;
       }
 
-      timeout = setTimeout(updateText, typingSpeed);
+      if (index <= phrase.length) {
+        requestAnimationFrame(typeText);
+      }
     };
 
-    timeout = setTimeout(updateText, typingSpeed);
+    requestAnimationFrame(typeText);
 
-    return () => clearTimeout(timeout);
-  }, [text, isCompleted, phrases]);
+    return () => {}; // Limpa a animação (não necessário aqui)
+  }, [phrase]);
 
   return (
     <div className="typing-effect">
       <span>{text}</span>
-      <span className="cursor" ></span>
     </div>
   );
 };
