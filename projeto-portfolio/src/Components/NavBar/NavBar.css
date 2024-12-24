@@ -23,14 +23,14 @@ z-index: 2;
 .contact a{
 color: #e2e2e2da;
 font-weight: bolder;
-border: 2px solid;
+border: 2px solid #51c9cbd2;
 border-radius: 20px;
 padding: 5px 13px ;
 cursor: pointer;
 }
 .contact a:hover {
 color: #51c9cbd2;
-border: 2px solid #51c9cbd2;
+border: 2px solid #51c9cbb0;
 }
 .header-background p, .header-background svg{
 display: flex;
@@ -44,7 +44,7 @@ gap: 15px;
 cursor: pointer;
   }
 .header-background svg:hover{
-  color: #51c9cbd2;
+  color: #e2e2e2;
 }
 nav {
   display: flex;
@@ -52,18 +52,18 @@ nav {
   gap: 60px;
   font-size: 1.1em;
 }
-.hamburger {
+.hamburger, nav h6 {
   display:none;
 }
 .custom-link{
   margin: 10px;
   font-size: 1.1em;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: bolder;
   color:#e2e2e2da;
   position: relative;
 }
-.mobile-contact {
+.mobile-contact, .icons-nav {
   display: none;
 }
 .skill::after,
@@ -126,7 +126,7 @@ nav {
   }
 
   .header-background {
-    gap: 210px;
+    gap: 250px;
     top: 1em;
   }
   @media (orientation: landscape)  {
@@ -140,6 +140,11 @@ nav {
     .header-background {
       top: 1em;
     }
+  }
+}
+@media screen and (max-width: 321px){
+  .header-background {
+    gap: 200px;
   }
 }
 
@@ -164,7 +169,7 @@ nav {
     }
     .header-background {
       top: 1.2em;
-      gap: 290px;
+      gap: 280px;
     }
   }
 }
@@ -208,7 +213,7 @@ nav {
     left: 0;
     opacity: 1;
     visibility: visible;
-    overflow-y: auto;  /* Adiciona rolagem vertical se necessário */
+    overflow-y: auto;
     transition: left 0.2s ease, opacity 0.3s ease;
   }
 
@@ -225,13 +230,19 @@ nav {
     visibility: visible;
     transition: opacity 0.3s ease, visibility 0s 0.3s;
   }
-
   nav {
     display: flex;
     flex-direction: column;
     margin-left: 0;
-    gap: 10px;
+    gap: 20px;
     font-size: 1.1em;
+  }
+  nav h6 {
+    display: flex;
+    justify-content: center;
+  }
+  nav a svg {
+    font-size: xx-small;
   }
   .custom-link {
     width: 0;
@@ -242,7 +253,7 @@ nav {
     justify-content: center;
     width: 70%;
     margin: 0 auto;
-    margin-top: 1em;
+    margin-top: 4em;
     color: #e2e2e2da;
     font-weight: bolder;
     border: 1px solid;
@@ -252,6 +263,23 @@ nav {
     }
     .mobile-contact:hover {
       color: #51c9cbd2;
+      border: 1px solid #51c9cbd2;
+    }
+    .icons-nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1em;
+      gap: 30px;
+    }
+    .icons-nav a {
+      display: flex;
+      align-items: center;
+      border: 1px solid #e2e2e2da;
+      padding: .3em;
+      border-radius: 20px;
+    }
+    .icons-nav a:hover {
       border: 1px solid #51c9cbd2;
     }
 }
