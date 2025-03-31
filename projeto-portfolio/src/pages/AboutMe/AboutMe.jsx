@@ -2,59 +2,52 @@ import './AboutMe.css';
 
 import profileImage  from "../../img/foto-perfil.png"
 
+import { Code, Lightbulb, Users }  from "lucide-react"
+
 import 'aos/dist/aos.css';
 
 const AboutMe = () => { 
 
   return (
-    <div className='about-text' id='about'>
+    <div className='about-main' id='about'>
       <div className='text-details' data-aos="fade-right">
-      <h2><span>&lt;&gt;</span>Sobre mim<span>&lt;/&gt;</span></h2>
-        <p>Atualmente, estou me aprofundando no desenvolvimento <strong className='important-name'> Front-end</strong>, com foco em práticas 
-          modernas e consumo de <strong className='important-name'> APIs </strong> para criar interfaces dinâmicas e interativas. Estou cursando 
-          <strong className='important-name'> Análise e Desenvolvimento de Sistemas </strong> , o que tem sido uma ótima oportunidade para construir 
-          uma base sólida em programação e estrutura de dados, além de explorar aspectos fundamentais 
-          do <strong className='important-name'>desenvolvimento de software</strong>.</p>
-      </div>
-        <div className='image-container'>
-          <img src={profileImage} alt="Foto de perfil"/>
+        <div className='primary-about'>
+          <div className='primary-img'>
+            <img src={profileImage} alt="" />
+          </div>
+          <div className='primary-text'>
+            <h6>Sobre mim</h6>
+            <h1>Combinando tecnologia e criatividade</h1>
+            <p>Sou um desenvolvedor front-end apaixonado por criar experiências digitais bonitas e funcionais. Com 
+              foco em usabilidade e design centrado no usuário, trabalho 
+              para entregar projetos que sejam tanto esteticamente agradáveis quanto tecnicamente robustos.</p>
+          </div>
         </div>
-         <div className='journey-title' data-aos="fade-up">
-         <h3>Minha jornada</h3>
-         </div>
-         <div className='about-memory'>
-           <div className='memory-details' data-aos="fade-right" >
-           <h6>Meu Primeiro Contato com a Programação</h6>
+        <div className='about-details'>
+          <div className='about-card'>
+            <span><Code /></span>
+            <h3>Desenvolvimento</h3>
+            <p>Especializado em desenvolvimento front-end com React, TypeScript e outras 
+              tecnologias modernas para criar aplicações web responsivas e performáticas.</p>
+          </div>
 
-            <p>Comecei na programação focando em algoritmos e lógica, explorando 
-              <strong className='important-name'> HTML e CSS</strong> para
-               construir as primeiras páginas e entender como tudo funcionava na 
-               <strong className='important-name'> web</strong> .</p>
-            </div>
-           <div className='memory-details' data-aos="fade-up" >
-          
-            <h6>Aprofundando em HTML, CSS e JavaScript</h6>
+          <div className='about-card'>
+            <span><Lightbulb /></span>
+            <h3>Solução de Problemas</h3>
+            <p>Abordagem analítica e criativa para resolver desafios técnicos e de design, sempre buscando a
+            melhor solução para cada problema específico.</p>
+          </div>
 
-            <p>Aprofundei meus conhecimentos em <strong className='important-name'> HTML e CSS</strong>, e então 
-            acabei evoluindo para o <strong className='important-name'>JavaScript</strong>,
-              que abriu portas para criar interações mais dinâmicas e funcionais.</p>
-           </div>
-           <div className='memory-details' data-aos="fade-left">
-           <h6>React e Carreira no Front-End</h6>
+          <div className='about-card'>
+            <span><Users /></span>
+            <h3>Colaboração</h3>
+            <p>Experiência em trabalhar em ambientes colaborativos, comunicando ideias efetivamente e
+              integrando feedback para melhorar o resultado final.</p>
+          </div>
+        </div>
+      </div>
+  </div>
 
-            <p>Após dominar o <strong className='important-name'>JavaScript</strong>, iniciei estudos em
-            <strong className='important-name'> React</strong>  e decidi ingressar 
-              na faculdade de <strong className='important-name'>Análise e Desenvolvimento de Sistemas </strong> 
-              com foco contínuo em <strong className='important-name'> front-end</strong>.</p>
-            </div>
-         </div>
-         
-         <p><a href="/cv-diego_ramos.pdf" target="_blank" rel="noopener noreferrer">
-          DOWLOAD CV</a></p>
-       
-         </div>
-
-    
   )
 }
 
