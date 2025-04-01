@@ -7,7 +7,6 @@ import { BrowserRouter} from 'react-router-dom'
 import Footer from './Components/Footer/Footer'
 import Home from './pages/Home/Home'
 import AboutMe from './pages/AboutMe/AboutMe'
-import BackToTop from './Components/BackToTop/BackToTop'
 
 
 const App = () => {
@@ -20,7 +19,6 @@ const App = () => {
       <Projects />
       <Contact />
       <Footer />
-      <BackToTop />
     </BrowserRouter>
   )
 }
