@@ -1,29 +1,30 @@
 .header-container {
-position: relative;
-height: 0;
+position: fixed;
+width: 100%;
 z-index: 2;
+}
+.header-container.header-box{
+backdrop-filter: blur(2rem);
+background-color: var(--background-transparent);
+box-shadow: var(--background) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+transition: all 0.3s ease-in-out;
 }
 .header-background {
   width: 100%;
-  height: 0;
   display: flex;
-  gap: 100px;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  gap: 5em;
   position: relative;
-  top: 2em;
   height: 50px;
   margin: 0 auto;
+  margin-top: .8em;
 }
-.darkmode-container {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.contact a{
+
+/* .contact a{
 color: #e2e2e2da;
 font-weight: bolder;
-border: 2px solid #51c9cbd2;
+border: 2px solid #4a6161d2;
 border-radius: 20px;
 padding: 5px 13px ;
 cursor: pointer;
@@ -31,39 +32,35 @@ cursor: pointer;
 .contact a:hover {
 color: #51c9cbd2;
 border: 2px solid #51c9cbb0;
-}
+} */
 .header-background p, .header-background svg{
-display: flex;
-font-size: 1.25em;
-align-items: center;
-justify-content: center;
-color: #e2e2e2da;
-gap: 15px;
+font-size: 1.3em;
+color: var(--title);
 }
 .header-background svg{
 cursor: pointer;
-  }
+}
 .header-background svg:hover{
   color: #e2e2e2;
 }
+
 nav {
   display: flex;
-  margin-left: 5.6em;
-  gap: 60px;
+  gap: 50px;
   font-size: 1.1em;
 }
+
 .hamburger, nav h6 {
   display:none;
 }
 .custom-link{
-  margin: 10px;
-  font-size: 1.1em;
+  font-size: .8em;
   text-decoration: none;
-  font-weight: bolder;
-  color:#e2e2e2da;
+  font-weight: 600;
+  color: var(--subTitle);
   position: relative;
 }
-.mobile-contact, .icons-nav {
+.icons-nav {
   display: none;
 }
 .skill::after,
@@ -75,14 +72,14 @@ nav {
   height: 0;
   display: block;
   margin-top: 0px;
-  background:#51c9cbd2;
+  background: var(--accent);
   transition: width 0.1s ease-in-out;
   -webkit-transition: width 0.3s ease-in-out, transform 0.1s ease;
 }
 .skill:hover,
 .project:hover,
 .cont:hover {
-  color:#51c9cbd2;
+  color:var(--title);
   font-weight: 600;
 }
 .skill:hover::after {
@@ -248,23 +245,6 @@ nav {
     width: 0;
     margin: 1em;
   }
-  .mobile-contact {
-    display: flex;
-    justify-content: center;
-    width: 70%;
-    margin: 0 auto;
-    margin-top: 4em;
-    color: #e2e2e2da;
-    font-weight: bolder;
-    border: 1px solid;
-    border-radius: 20px;
-    padding: 5px 10px ;
-    cursor: pointer;
-    }
-    .mobile-contact:hover {
-      color: #51c9cbd2;
-      border: 1px solid #51c9cbd2;
-    }
     .icons-nav {
       display: flex;
       justify-content: center;
