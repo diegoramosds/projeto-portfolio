@@ -1,35 +1,33 @@
 .card {
-    margin: 0 20px;
-    background-color: #e4e4e415;
-    border: 1px solid #e4e4e415;
-    box-shadow: 3px 3px 4px 0px #00000023;
-    width: 260px;
-    height: 160px;
-    border-radius: 20px 50px;
-    color: #fff;
-    font-size: 18px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .card:hover{
-    background-color: #e4e4e411;
-  }
+  margin: 0 20px;
+  background-color: #e4e4e415;
+  border: 1px solid #e4e4e415;
+  box-shadow: 3px 3px 4px 0px #00000023;
+  width: 260px;
+  height: 160px;
+  border-radius: 20px 50px;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card:hover {
+  background-color: #e4e4e411;
+}
 
-  .card svg {
-    font-size: 2em;
-  }
-  .card h6 {
-    margin-top: 10px;
-  }
+.card svg {
+  font-size: 2em;
+}
+.card h6 {
+  margin-top: 10px;
+}
 
-  @media screen and (min-width: 322px) and (max-width: 766px) {
-
-    .card {
-      width: 180px;
+@media screen and (min-width: 322px) and (max-width: 766px) {
+  .card {
+    width: 180px;
     height: 120px;
-    }
-
+  }
 }
