@@ -1,8 +1,15 @@
-import './AnimationSkills.css';  // Importa o arquivo CSS
+import "./AnimationSkills.css"; // Importa o arquivo CSS
 
 import Marquee from "react-fast-marquee";
-import { FaCss3, FaGit, FaGithub, FaHtml5, FaJs, FaReact } from "react-icons/fa";
-import { RiTailwindCssFill } from 'react-icons/ri';
+import {
+  FaCss3,
+  FaGit,
+  FaGithub,
+  FaHtml5,
+  FaJs,
+  FaReact,
+} from "react-icons/fa";
+import { RiTailwindCssFill } from "react-icons/ri";
 
 function AnimatedCards() {
   return (
