@@ -7,21 +7,22 @@
 :root {
   --background: #121928;
   --background-transparent: rgba(14, 18, 31, 0.445);
-  --background-secondary: #131C2E;
+  --background-secondary: #131c2e;
   --title: #f8fafc;
   --muted-foreground: #a9a5ff;
   --secondary: #223247;
-  --secondary-hover: #1d2a3b;
+  --secondary-hover: #1d2a3bc5;
   --subTitle: #a5adc6;
   --accent: #7e3af2;
+  --accent-hover: #6f31da;
   --box-shadow: #7e3af238;
   --accent-transparent: #5a2aac2c;
-  --accent-card: #0F1729;
+  --accent-card: #0f1729;
   --accent-card-hover: #7e3af20c;
-  --accent-before:   #171D35;
-  --accent-card-project:  #0f17276e ;
+  --accent-before: #171d35;
+  --accent-card-project: #16233a44;
   --destructive: #9f1b32;
-  }
+}
 /* ligthmode */
 /* :root {
 --background: #f8fafc;
@@ -35,23 +36,27 @@
 --border: #e2eaf2;
 } */
 
-
-
-html,body {
+html,
+body {
   overflow-x: hidden;
 }
 body {
   background: #000;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-h1,h2, h3 {
+h1,
+h2,
+h3,
+h4 {
   color: var(--title);
 }
 
 p {
-color: var(--subTitle);
-line-height: 1.8em;
+  color: var(--subTitle);
+  line-height: 1.8em;
 }
 h6 {
   color: var(--accent);
@@ -61,6 +66,11 @@ h6 {
 }
 .important-name {
   color: #51c9cbd2;
+}
+
+a {
+  text-decoration: none;
+  color: var(--subTitle);
 }
 
 ul {
@@ -73,10 +83,11 @@ button {
   cursor: pointer;
   border: none;
   text-align: center;
-  transition: all 0.3s, color 0.3s;
+  transition:
+    all 0.3s,
+    color 0.3s;
 }
 button:hover {
-
 }
 
 ::-webkit-scrollbar {
@@ -116,35 +127,31 @@ button:hover {
   }
 }
 
-
 @media screen and (max-width: 766px) {
-  h1,h2 {
-  font-size: 1.2em;
+  h1,
+  h2 {
+    font-size: 1.2em;
   }
   h3 {
     font-size: 1.3em;
   }
   h6 {
-    font-size: .8em;
+    font-size: 0.8em;
     color: #51c9cbd2;
-    margin-top: .5em;
+    margin-top: 0.5em;
   }
 
   button {
     width: 125px;
     height: 30px;
     margin: 10px auto;
-    font-size: 1.1em;  
+    font-size: 1.1em;
   }
 
   @media (orientation: landscape) {
-
   }
 }
 @media screen and (min-width: 767px) and (max-width: 1250px) {
-   
   @media (orientation: landscape) {
-
   }
 }
-
