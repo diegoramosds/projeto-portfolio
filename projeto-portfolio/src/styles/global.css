@@ -14,27 +14,26 @@
   --secondary-hover: #1d2a3bc5;
   --subTitle: #a5adc6;
   --accent: #7e3af2;
-  --accent-hover: #6f31da;
-  --box-shadow: #7e3af238;
+  --accent-hover: #6430be;
+  --box-shadow: #7e3af252;
   --accent-transparent: #5a2aac2c;
   --accent-card: #0f1729;
   --accent-card-hover: #7e3af20c;
   --accent-before: #171d35;
   --accent-card-project: #16233a44;
   --destructive: #9f1b32;
-}
-/* ligthmode */
-/* :root {
---background: #f8fafc;
+
+--background-ligth: #eeeeee;
+--background-ligth-transparent: #f8fafc46;
 --foreground: #121928;
 --card: #ffffff;
 --primary: #a9a5ff;
---secondary: #f5f8fb;
---muted-foreground: #697287;
---accent: #7e3af2;
+--secondary-ligth: #f5f5f5;
+--muted-foreground-ligth: #697287;
 --destructive: #f43f5e;
 --border: #e2eaf2;
-} */
+}
+
 
 html,
 body {
@@ -63,14 +62,6 @@ h6 {
   text-align: center;
   border-radius: 40px;
   background-color: var(--accent-transparent);
-}
-.important-name {
-  color: #51c9cbd2;
-}
-
-a {
-  text-decoration: none;
-  color: var(--subTitle);
 }
 
 ul {
