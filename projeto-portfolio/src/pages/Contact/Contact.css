@@ -37,8 +37,8 @@
 .primary-contact h6::before {
   position: absolute;
   content: "";
-  top: -220px;
-  right: -1300px;
+  top: -30vh;
+  right: -90vw;
   width: 300px;
   height: 310px;
   border-radius: 50%;
@@ -153,8 +153,8 @@ transform: translateX(3px);
 .social-icons::before {
   position: absolute;
   content: "";
-  top: 130px;
-  left: -240px;
+  top: 18vh;
+  left: -18vw;
   width: 300px;
   height: 310px;
   border-radius: 50%;
@@ -200,6 +200,16 @@ transform: translateX(3px);
 }
 .primary-contact p {
   width: 95%;
+}
+
+.primary-contact h6::before {
+  top: -40vh;
+  right: -70vw;
+}
+
+.social-icons::before {
+  top: 80vh;
+  left: -15vw;
 }
   @media (orientation: landscape) {
   }
