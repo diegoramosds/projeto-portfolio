@@ -1,117 +1,186 @@
 .envform {
-  width: 100vw;
-  height: 100vh;
-  margin: 0 auto;
-  background-color: #282a3a3a;
-  padding-bottom: 10em;
-  padding-top: 2em;
+  width: 100%;
+  min-height: 800px;
+  background-color: var(--background-secondary);
+  display: flex;
+}
+.form-message {
+  display: flex;
+  width: 80%;
+  margin: 6em auto;
+}
+
+.primary-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+  margin: 1em;
+  width: 100%;
+}
+.primary-contact h4 {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.2s ease-in-out;
+}
+.primary-contact h4:hover {
+  color: var(--accent);
+}
+.primary-contact h4 svg {
+  color: var(--accent);
+}
+.primary-contact h6 {
+  position: relative;
+  width: 10%;
+}
+.primary-contact h6::before {
+  position: absolute;
+  content: "";
+  top: -220px;
+  right: -1300px;
+  width: 300px;
+  height: 310px;
+  border-radius: 50%;
+  z-index: 1;
+  background-color: var(--accent-before);
+}
+.primary-contact p {
+  width: 85%;
 }
 
 .main-contact {
+  width: 100%;
+  height: 530px;
+  border-radius: 20px;
   display: flex;
-  width: 70%;
-  min-height: 65%;
-  margin: 0 auto;
   align-items: center;
-  margin-top: 6em;
-  border-radius: 10px;
-  box-shadow: 0px 3px 6px 1px;
+  background-color: #fff;
+  position: relative;
+  z-index: 2;
+  transition: transform .4s ease-in-out;
 }
-
-.main-contact img {
-  width: 450px;
-  animation: rotateImage 3s ease-in-out infinite;
+.main-contact:hover {
+transform: translateY(-8px);
 }
-
-@keyframes rotateImage {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(2deg);
-  }
-  75% {
-    transform: rotate(2deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
-.envform p{
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  color: #e2e2e2da;
-  width: 70%;
-  margin: 1em auto;
-  margin-top: 4em;
-}
-
-form {
+.main-contact form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  width: 40%;
-  margin: 1em auto;
-
+  gap: 20px;
+  padding: 1em;
+  width: 85%;
+  margin: 0 auto;
 }
 
-
-label {
-font-weight: bold;
-color: #51c9cbd2;
-font-size: 1.1em;
-}
-
-.envform input, textarea {
-  display: flex;
-  text-align: center;
-  width: 100%;
-  box-sizing: border-box;
-  padding: .8em;
-  margin:1.5em auto;
-  background-color: transparent;
+.main-contact form input,
+.main-contact form textarea {
+  padding: 15px;
+  color: var(--accent);
   border: none;
-  color: #ffffffdc;
-  border-bottom: 1px solid #ffffff3a;
+  border: 1px solid var(--background);
+  border-radius: 15px;
+  transition: all 0.4s ease-in-out;
 }
-.envform textarea {
-resize: none;
+.main-contact form textarea {
+  height: 100px;
 }
-.envform input::placeholder, textarea::placeholder {
-text-align: center;
-color: #ffffffdc;
-font-size: 1.2em;
+.main-contact form label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: var(--secondary-hover);
+  font-weight: 600;
+  font-size: 0.9em;
 }
-input:focus::placeholder, textarea:focus::placeholder {
+.main-contact form button {
+  width: 100%;
+  height: 45px;
+  font-size: .9em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 20px;
+  background-color: var(--accent);
+  color: var(--title);
+  font-weight: bolder;
+  font-weight: bolder;
+}
+.main-contact form button:hover {
+background-color: var(--accent-hover);
+}
+.main-contact form button svg {
+  transition: all 0.4s ease-in-out;
+}
+
+.main-contact form button:hover svg {
+transform: translateX(3px);
+}
+.main-contact form input::placeholder,
+.main-contact form textarea::placeholder {
+  color: var(--subTitle);
+}
+.main-contact form input:focus::placeholder,
+.main-contact form textarea:focus::placeholder {
   opacity: 0;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease-in-out;
 }
-.envform input:focus, textarea:focus {
-outline: none;
-text-align: center;
-color: #ffffffdc;
+.main-contact form input:focus,
+.main-contact form textarea:focus {
+  box-shadow: var(--accent) 0px 1px 4px;
+  outline: none;
+  color: var(--accent);
 }
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0px 1000px #282a3af8 inset !important;
-  -webkit-text-fill-color: #ffffff !important;
+
+.main-contact form input:-webkit-autofill,
+.main-contact form textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px rgba(34, 36, 36, 0) inset !important;
+  -webkit-text-fill-color: var(--accent) !important;
+}
+
+.social-medias {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em;
+  gap: 20px;
+}
+.social-icons {
+  display: flex;
+  gap: 30px;
+  position: relative;
+  z-index: 1;
+}
+.social-icons::before {
+  position: absolute;
+  content: "";
+  top: 130px;
+  left: -240px;
+  width: 300px;
+  height: 310px;
+  border-radius: 50%;
+  background-color: var(--accent-before);
+}
+.social-icons svg {
+  background-color: var(--title);
+  width: 25px;
+  padding: 0.6em;
+  border-radius: 22px;
+  color: var(--background);
+  transition: background-color 0.2s ease-in-out;
+}
+.social-icons svg:hover {
+  background-color: var(--accent);
 }
 
 .loading-container .error-message {
-color: #c92121d2;
+  color: #c92121d2;
 }
 .loading-container .success-message {
   color: #fff;
-  }
+}
 
-.error-message, .success-message {
+.error-message,
+.success-message {
   width: 15vw;
   margin: 0 auto;
   border-radius: 5%;
@@ -121,64 +190,23 @@ color: #c92121d2;
 }
 
 @media screen and (max-width: 766px) {
-  .envform p{
-    width: 90%;
-    font-size: 1em;
-  }
-
-  form {
-  width: 70%;
-  }
-  label {
-  font-size: 1.2em;
-  }
-  .envform input, textarea {
-    width: 70%;
-    margin:1.3em auto;
-  }
-  .envform input::placeholder, textarea::placeholder {
-  font-size: 1.1em;
-  }
-
-
-  .image-contact svg{
-    width: 80px;
-  }
-
-  @media (orientation: landscape)  {
-    form {
-      width: 50vw;
-      }
-      .envform input, textarea {
-        width: 80%;
-        box-sizing: border-box;
-        padding: 0em;
-        margin:1em auto;
-      }
+  .form-message {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+}
+.primary-contact h6 {
+  width: 50%;
+}
+.primary-contact p {
+  width: 95%;
+}
+  @media (orientation: landscape) {
   }
 }
 
 @media screen and (min-width: 767px) and (max-width: 1250px) {
-  form {
-  width: 80%;
-  }
-
-  .envform input, textarea {
-    width: 60%;
-    margin:2.3em auto;
-  }
-  .id {
-    display: flex;
-    justify-content: unset;
-  }
-  .image-contact svg{
-    margin-left: 5em;
-    width: 170px;
-  }
 }
 
 @media screen and (max-width: 1250px) {
- .main-contact img {
-    display: none;
-  }
 }

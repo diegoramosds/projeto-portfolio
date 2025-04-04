@@ -1,9 +1,23 @@
-import './Skills.css';
+import "./Skills.css";
 
-import { Component } from 'react';
+import { Component } from "react";
 
-import 'aos/dist/aos.css';
-import AnimatedCards from '../../Components/AnimationSkills/AnimatedCardsSkills';
+import "aos/dist/aos.css";
+
+import {
+  Code2,
+  FileCode,
+  Braces,
+  PaintBucket,
+  SquareGanttChart,
+  Boxes,
+  GitBranch,
+  Github,
+  Globe,
+  PenTool,
+  Server,
+  Terminal,
+} from "lucide-react";
 
 class Skills extends Component {
   constructor() {
@@ -13,29 +27,84 @@ class Skills extends Component {
   render() {
     return (
       <>
-        <section >
-        <div className='icons-container' id='skills'>
-          <div className='text-skills'>
-            <h1>Habilidades</h1>
-            <p>Estou sempre em busca de novos <strong className='important-name'>conhecimentos</strong> e desafios. A cada dia, aprendo e me aprofundo em <strong className='important-name'>tecnologias </strong> 
-              e ferramentas que me ajudam a criar <strong className='important-name'>soluções</strong>   melhores e mais eficientes.</p>
-          </div>
-          <div className='details-skills'>
-              <AnimatedCards />
-              </div>
-                <div className='details-text' data-aos="fade-right">
-                  <p> Concluí vários cursos oferecidos pelo <strong className='important-name'>Curso em Vídeo </strong> 
-                    e pela <strong className='important-name'>Udemy</strong>, que me proporcionaram um conhecimento
-                      em desenvolvimento. Além disso, participei de eventos online promovidos pela <strong className='important-name'>Rocketseat</strong>, 
-                      onde pude me aprofundar em tecnologias modernas e práticas do mercado. Também cursei 
-                      no <strong className='important-name'>Senai</strong>, que acrescentaram um conhecimento prático e aplicado ao meu currículo.</p>
-                </div>
+        <section>
+          <div className="main-skills" id="skills">
+            <div className="primary">
+              <h6 className="bg-pulse">Habilidades</h6>
+              <h1>Competências Técnicas</h1>
+              <p className="bg-pulse-bottom">
+                Tecnologias e ferramentas que domino para criar soluções
+                digitais de alta qualidade, com foco em performance e
+                experiência do usuário.
+              </p>
             </div>
-          </section>
+
+            <div className="list-skills">
+              <div className="card-skills">
+                <h3>
+                  <Code2 /> Front-end
+                </h3>
+
+                <div className="hard-skills">
+                  <ul>
+                    <li>
+                      <FileCode /> HTML5
+                    </li>
+                    <li>
+                      <PaintBucket /> CSS
+                    </li>
+                    <li>
+                      <Braces /> JavaScript
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <SquareGanttChart /> React
+                    </li>
+                    <li>
+                      <Braces /> TypeScript
+                    </li>
+                    <li>
+                      <Boxes /> Tailwind CSS
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="card-skills">
+                <h3>
+                  <Code2 /> Tenho desenvolvido
+                </h3>
+
+                <div className="hard-skills">
+                  <ul>
+                    <li>
+                      <Github /> GitHub
+                    </li>
+                    <li>
+                      <GitBranch /> Git
+                    </li>
+                    <li>
+                      <Globe /> Responsividade
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <Server /> APIs RESTful
+                    </li>
+                    <li>
+                      <PenTool /> Figma
+                    </li>
+                    <li>
+                      <Terminal /> Node.js
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </>
     );
   }
 }
 export default Skills;
-
-
