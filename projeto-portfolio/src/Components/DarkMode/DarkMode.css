@@ -1,5 +1,9 @@
 /* Navbar */
 
+.dark_mode svg{
+display: flex;
+}
+
 .dark-mode .header-container.header-box {
   background-color: var(--background-ligth-transparent);
   box-shadow:

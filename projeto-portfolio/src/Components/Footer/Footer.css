@@ -120,7 +120,19 @@ footer {
 .footer-options a {
   font-size: 0.75em;
 }
+.created-by {
+  text-align: center;
+}
 }
 
 @media screen and (min-width: 767px) and (max-width: 1250px) {
+  .details-footer {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .created-by {
+    margin: 0.8em;
+    font-size: 0.9em;
+    text-align: center;
+  }
 }
