@@ -149,6 +149,7 @@ transform: translateX(3px);
   gap: 30px;
   position: relative;
   z-index: 1;
+  margin-bottom: 1em;
 }
 .social-icons::before {
   position: absolute;
@@ -203,20 +204,19 @@ transform: translateX(3px);
 }
 
 .primary-contact h6::before {
-  top: -40vh;
+  top: -35vh;
   right: -70vw;
 }
 
 .social-icons::before {
-  top: 80vh;
-  left: -15vw;
+  top: 70vh;
+  left: -20vw;
 }
-  @media (orientation: landscape) {
-  }
 }
 
 @media screen and (min-width: 767px) and (max-width: 1250px) {
-}
-
-@media screen and (max-width: 1250px) {
+  .form-message {
+    flex-direction: column;
+    width: 75%;
+  } 
 }

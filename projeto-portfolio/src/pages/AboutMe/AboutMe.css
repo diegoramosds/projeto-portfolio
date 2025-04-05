@@ -1,6 +1,6 @@
 .about-main {
   width: 100%;
-  min-height: 1000px;
+  min-height: 800px;
   background-color: var(--background-secondary);
   text-align: center;
   padding-bottom: 5em;
@@ -12,9 +12,10 @@
   gap: 80px;
   padding-top: 4em;
 }
-
+.primary-img {
+  z-index: 2;
+}
 .primary-img img {
-  z-index: 5;
   padding: 0.5em;
   width: 200px;
   height: 200px;
@@ -54,13 +55,12 @@
 .about-details::before {
   position: absolute;
   content: "";
-  bottom: -60vh;
+  bottom: -30vh;
   left: -10vw;
   width: 340px;
   height: 320px;
   border-radius: 50%;
   background-color: var(--accent-before);
-  z-index: -1;
 }
 
 .primary-text h6 {
@@ -69,10 +69,8 @@
   border-radius: 40px;
 }
 .primary-text h1 {
+  z-index: 3;
   font-size: 2.5em;
-}
-
-.primary-text p {
 }
 
 .about-details {
@@ -99,6 +97,7 @@
   border-radius: 20px;
   padding: 2em;
   transition: all 0.2s ease-in-out;
+  z-index: 3;
 }
 .about-card:hover {
   transform: translateY(-5px);
@@ -134,8 +133,13 @@
   gap: 20px;
   width: 90%;
 }
+.primary-text h1 {
+  font-size: 2em;
+  width: 98%;
+}
+
 .primary-text::before {
-  top: -80vh;
+  top: -50vh;
   right: -43vw;
 }
 .about-details::before {
@@ -146,10 +150,6 @@
 .primary-text h6 {
   width: 35%;
 }
-.primary-text h1 {
-  font-size: 2.5em;
-}
-
 
 .about-details {
   display: flex;
@@ -183,6 +183,19 @@
   }
 }
 @media screen and (min-width: 767px) and (max-width: 1250px) {
-  @media (orientation: landscape) {
+  .primary-text h6 {
+    width: 25%;
   }
+  .primary-text h1 {
+    font-size: 2em;
+    width: 98%;
+  }
+  
+  .primary-text p {
+    width: 95%;
+  }
+  
+  .about-card {
+        width: 65%;
+    }
 }

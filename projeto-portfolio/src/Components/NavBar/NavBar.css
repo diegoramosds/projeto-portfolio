@@ -120,6 +120,7 @@ nav h6 {
 @media screen and (max-width: 766px) {
   .hamburger {
     display: flex;
+    gap: 15px;
     align-items: center;
     z-index: 3;
     font-size: 1.3em;
@@ -128,6 +129,18 @@ nav h6 {
       transform 0.3s ease,
       scale 0.3s ease;
   }
+  .darkmode-laptop {
+    display: none;
+  }
+  .icons-nav {
+    display: flex;
+    gap: 17px;
+    align-items: center;
+  }
+  .header-background {
+    gap: 11em;
+  }
+
   .hamburger svg {
     width: 18px;
   }

@@ -4,17 +4,11 @@ import profileImage from "../../img/foto-perfil.png";
 
 import { Code, Lightbulb, Users } from "lucide-react";
 
-import "aos/dist/aos.css";
-import AOS from "aos";
-import { useEffect } from "react";
-
 const AboutMe = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []);
+
   return (
     <div className="about-main" id="about">
-      <div className="text-details" data-aos="fade-right">
+      <div className="text-details">
         <div className="primary-about">
           <div className="primary-img">
             <img src={profileImage} alt="" />

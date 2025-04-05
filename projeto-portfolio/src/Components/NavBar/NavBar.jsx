@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import "./NavBar.css";
 import { FaBars, FaGithub, FaLinkedin, FaTimes } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
+
 import DarkMode from "../DarkMode/DarkMode";
 
 function Header() {
@@ -77,9 +77,13 @@ function Header() {
           {isOpen && <div className="overlay" onClick={closeMenu}></div>}
 
           {!isOpen && (
-            <div className="hamburger open-modal" onClick={toggleMenu}>
-              <FaBars className="icon rotate" />{" "}
+            <div className="icons-nav">
+              <div className="hamburger open-modal" onClick={toggleMenu}>
+                <FaBars className="icon rotate" />
+              </div>
+              <DarkMode />
             </div>
+
           )}
 
           <div
@@ -87,7 +91,7 @@ function Header() {
             onClick={closeMenu}
           >
             <div className="hamburger close-modal" onClick={toggleMenu}>
-              <FaTimes className="icon rotate" />{" "}
+              <FaTimes className="icon rotate" />
             </div>
             <nav>
               <a onClick={scrollToHome} className="custom-link cont">
@@ -105,7 +109,9 @@ function Header() {
               <a onClick={scrollToContact} className="custom-link project">
                 Contato
               </a>
-              <DarkMode />
+              <div className="darkmode-laptop">
+                <DarkMode />
+              </div>
             </nav>
           </div>
         </div>
