@@ -275,4 +275,7 @@ display: flex;
 }
 
 @media screen and (max-width: 766px) {
+  .dark-mode .custom-link {
+    color: var(--secondary-ligth);
+  }
 }
