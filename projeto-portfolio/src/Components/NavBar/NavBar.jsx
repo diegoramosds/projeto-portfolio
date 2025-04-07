@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import "./NavBar.css";
-import { FaBars, FaGithub, FaLinkedin, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 import DarkMode from "../DarkMode/DarkMode";
 
@@ -47,7 +47,6 @@ function Header() {
     };
   }, []);
 
-
   const toggleMenu = () => {
     setIsOpen(!isOpen);
     if (!isOpen) {
@@ -64,6 +63,32 @@ function Header() {
     document.body.style.overflowY = "auto";
     document.body.style.position = "";
   };
+
+  const [activeSection, setActiveSection] = useState("home");
+
+  useEffect(() => {
+    const sections = document.querySelectorAll("section");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      {
+        threshold: 0.6,
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => {
+      sections.forEach((section) => observer.unobserve(section));
+    };
+  }, []);
+
   return (
     <>
       <div className={`header-container ${scroll ? "header-box" : ""}`}>
@@ -78,12 +103,11 @@ function Header() {
 
           {!isOpen && (
             <div className="icons-nav">
+              <DarkMode />
               <div className="hamburger open-modal" onClick={toggleMenu}>
                 <FaBars className="icon rotate" />
               </div>
-              <DarkMode />
             </div>
-
           )}
 
           <div
@@ -94,24 +118,36 @@ function Header() {
               <FaTimes className="icon rotate" />
             </div>
             <nav>
-              <a onClick={scrollToHome} className="custom-link cont">
-                Inicio
+              <a
+                onClick={scrollToHome}
+                className={`custom-link cont ${activeSection === "home" ? "active" : ""}`}
+              >
+                Início
               </a>
-              <a onClick={scrollToAbout} className="custom-link cont">
+              <a
+                onClick={scrollToAbout}
+                className={`custom-link cont ${activeSection === "about" ? "active" : ""}`}
+              >
                 Sobre
               </a>
-              <a onClick={scrollToSkills} className="custom-link skill">
+              <a
+                onClick={scrollToSkills}
+                className={`custom-link skill ${activeSection === "skills" ? "active" : ""}`}
+              >
                 Habilidades
               </a>
-              <a onClick={scrollToProjects} className="custom-link project">
+              <a
+                onClick={scrollToProjects}
+                className={`custom-link project ${activeSection === "projects" ? "active" : ""}`}
+              >
                 Projetos
               </a>
-              <a onClick={scrollToContact} className="custom-link project">
+              <a
+                onClick={scrollToContact}
+                className={`custom-link project ${activeSection === "contact" ? "active" : ""}`}
+              >
                 Contato
               </a>
-              <div className="darkmode-laptop">
-                <DarkMode />
-              </div>
             </nav>
           </div>
         </div>
