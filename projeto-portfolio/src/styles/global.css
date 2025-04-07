@@ -15,7 +15,7 @@
   --subTitle: #a5adc6;
   --accent: #7e3af2;
   --accent-hover: #6430be;
-  --box-shadow: #7e3af252;
+  --box-shadow: #7e3af23a;
   --accent-transparent: #5a2aac2c;
   --accent-card: #0f1729;
   --accent-card-hover: #7e3af20c;
@@ -23,17 +23,16 @@
   --accent-card-project: #16233a44;
   --destructive: #9f1b32;
 
---background-ligth: #ffffff;
---background-ligth-transparent: #f8fafc46;
---foreground: #121928;
---card: #ffffff;
---primary: #a9a5ff;
---secondary-ligth: #f5f5f5;
---muted-foreground-ligth: #697287;
---destructive: #f43f5e;
---border: #e2eaf2;
+  --background-ligth: #ffffff;
+  --background-ligth-transparent: #f8fafc46;
+  --foreground: #121928;
+  --card: #ffffff;
+  --primary: #a9a5ff;
+  --secondary-ligth: #f5f5f5;
+  --muted-foreground-ligth: #697287;
+  --destructive: #f43f5e;
+  --border: #e2eaf2;
 }
-
 
 html,
 body {
@@ -119,30 +118,7 @@ button:hover {
 }
 
 @media screen and (max-width: 766px) {
-  h1,
-  h2 {
-    font-size: 1.2em;
-  }
-  h3 {
-    font-size: 1.3em;
-  }
-  h6 {
-    font-size: 0.8em;
-    color: #51c9cbd2;
-    margin-top: 0.5em;
-  }
 
-  button {
-    width: 125px;
-    height: 30px;
-    margin: 10px auto;
-    font-size: 1.1em;
-  }
-
-  @media (orientation: landscape) {
-  }
 }
 @media screen and (min-width: 767px) and (max-width: 1250px) {
-  @media (orientation: landscape) {
-  }
 }
