@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { FaCircleHalfStroke } from "react-icons/fa6";
+import { MoonIcon, Sun } from "lucide-react";
 import "./DarkMode.css";
 
 const DarkMode = () => {
@@ -18,10 +18,11 @@ const DarkMode = () => {
 
   return (
     <div className="dark_mode" onClick={toggleDarkMode}>
-      <FaCircleHalfStroke
-        title={darkMode ? "Modo escuro" : "Modo claro"}
-        className="icon rotate"
-      />
+      {darkMode ? (
+        <Sun title={"Modo claro"} className="icon rotate" />
+      ) : (
+        <MoonIcon title={"Modo escuro"} className="icon rotate" />
+      )}
     </div>
   );
 };
