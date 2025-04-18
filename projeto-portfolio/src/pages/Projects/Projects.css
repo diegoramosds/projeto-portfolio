@@ -131,24 +131,22 @@
 }
 
 @media screen and (max-width: 766px) {
-.img-item {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  align-items: center;
-  text-align: left;
-  width: 85%;
-  min-height: 540px;
-  margin: 2em .8em;
-}
+  .img-item {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    width: 85%;
+    min-height: 540px;
+    margin: 2em 0.8em;
+  }
 
-.expand-projects {
-  min-width:65%;
-}
-
+  .expand-projects {
+    min-width: 65%;
+  }
 
   @media (orientation: landscape) {
-
   }
 }
 @media screen and (min-width: 767px) and (max-width: 1250px) {

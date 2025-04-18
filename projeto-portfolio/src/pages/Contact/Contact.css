@@ -58,10 +58,10 @@
   background-color: #fff;
   position: relative;
   z-index: 2;
-  transition: transform .4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
 }
 .main-contact:hover {
-transform: translateY(-8px);
+  transform: translateY(-8px);
 }
 .main-contact form {
   display: flex;
@@ -95,7 +95,7 @@ transform: translateY(-8px);
 .main-contact form button {
   width: 100%;
   height: 45px;
-  font-size: .9em;
+  font-size: 0.9em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -107,14 +107,14 @@ transform: translateY(-8px);
   font-weight: bolder;
 }
 .main-contact form button:hover {
-background-color: var(--accent-hover);
+  background-color: var(--accent-hover);
 }
 .main-contact form button svg {
   transition: all 0.4s ease-in-out;
 }
 
 .main-contact form button:hover svg {
-transform: translateX(3px);
+  transform: translateX(3px);
 }
 .main-contact form input::placeholder,
 .main-contact form textarea::placeholder {
@@ -192,31 +192,31 @@ transform: translateX(3px);
 
 @media screen and (max-width: 766px) {
   .form-message {
-  display: flex;
-  flex-direction: column;
-  width: 95%;
-}
-.primary-contact h6 {
-  width: 50%;
-}
-.primary-contact p {
-  width: 95%;
-}
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+  }
+  .primary-contact h6 {
+    width: 50%;
+  }
+  .primary-contact p {
+    width: 95%;
+  }
 
-.primary-contact h6::before {
-  top: -35vh;
-  right: -70vw;
-}
+  .primary-contact h6::before {
+    top: -35vh;
+    right: -70vw;
+  }
 
-.social-icons::before {
-  top: 70vh;
-  left: -20vw;
-}
+  .social-icons::before {
+    top: 70vh;
+    left: -20vw;
+  }
 }
 
 @media screen and (min-width: 767px) and (max-width: 1250px) {
   .form-message {
     flex-direction: column;
     width: 75%;
-  } 
+  }
 }

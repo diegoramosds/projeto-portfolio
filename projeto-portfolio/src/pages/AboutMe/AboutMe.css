@@ -120,64 +120,62 @@
 
 @media screen and (max-width: 766px) {
   .primary-about {
-  flex-direction: column;
-  gap: 80px;
-  padding-top: 5em;
-}
+    flex-direction: column;
+    gap: 80px;
+    padding-top: 5em;
+  }
 
-.primary-text {
-  display: flex;
-  text-align: left;
-  flex-direction: column;
-  position: relative;
-  gap: 20px;
-  width: 90%;
-}
-.primary-text h1 {
-  font-size: 2em;
-  width: 98%;
-}
+  .primary-text {
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    position: relative;
+    gap: 20px;
+    width: 90%;
+  }
+  .primary-text h1 {
+    font-size: 2em;
+    width: 98%;
+  }
 
-.primary-text::before {
-  top: -50vh;
-  right: -43vw;
-}
-.about-details::before {
-  bottom: -30vw;
-  left: -30vw;
-}
+  .primary-text::before {
+    top: -50vh;
+    right: -43vw;
+  }
+  .about-details::before {
+    bottom: -30vw;
+    left: -30vw;
+  }
 
-.primary-text h6 {
-  width: 35%;
-}
+  .primary-text h6 {
+    width: 35%;
+  }
 
-.about-details {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  flex-wrap: wrap;
-  position: relative;
-  align-items: center;
-  gap: 30px;
-  margin-top: 5em;
-  width: 100%;
-}
+  .about-details {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+    align-items: center;
+    gap: 30px;
+    margin-top: 5em;
+    width: 100%;
+  }
 
-.about-card {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 80%;
-  min-height: 220px;
-  text-align: left;
-  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
-  background-color: var(--accent-card);
-  border-radius: 20px;
-  padding: 2em;
-  transition: all 0.2s ease-in-out;
-}
-
-
+  .about-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+    min-height: 220px;
+    text-align: left;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    background-color: var(--accent-card);
+    border-radius: 20px;
+    padding: 2em;
+    transition: all 0.2s ease-in-out;
+  }
 
   @media (orientation: landscape) {
   }
@@ -190,12 +188,12 @@
     font-size: 2em;
     width: 98%;
   }
-  
+
   .primary-text p {
     width: 95%;
   }
-  
+
   .about-card {
-        width: 65%;
-    }
+    width: 65%;
+  }
 }

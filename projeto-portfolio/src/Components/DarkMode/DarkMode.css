@@ -1,7 +1,7 @@
 /* Navbar */
 
-.dark_mode svg{
-display: flex;
+.dark-mode .dark_mode svg {
+  background-color: var(--accent-transparent);
 }
 
 .dark-mode .header-container.header-box {
