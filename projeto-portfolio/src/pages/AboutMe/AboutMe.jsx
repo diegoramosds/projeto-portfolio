@@ -5,7 +5,6 @@ import profileImage from "../../img/foto-perfil.png";
 import { Code, Lightbulb, Users } from "lucide-react";
 
 const AboutMe = () => {
-
   return (
     <div className="about-main" id="about">
       <div className="text-details">
