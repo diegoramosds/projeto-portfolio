@@ -33,7 +33,7 @@ function Contact() {
         "service_c1py0pm",
         "template_8rrrbav",
         templateParams,
-        "B0mlsy15Z3WowbyQr"
+        "B0mlsy15Z3WowbyQr",
       )
       .then(() => {
         setName("");
@@ -73,14 +73,11 @@ function Contact() {
           <div className="social-medias">
             <h3>Conecte-se comigo:</h3>
             <div className="social-icons">
-              <a href="">
+              <a href="https://github.com/diegoramosds" target="_blank">
                 <Github />
               </a>
-              <a href="">
+              <a href="https://www.linkedin.com/in/diego-rds/" target="_blank">
                 <Linkedin />
-              </a>
-              <a href="">
-                <Github />
               </a>
             </div>
           </div>
@@ -122,7 +119,11 @@ function Contact() {
               />
             </label>
             <div className="loading-container">
-              {!loading && <button type="submit">Enviar <Send size={17}/></button>}
+              {!loading && (
+                <button type="submit">
+                  Enviar <Send size={17} />
+                </button>
+              )}
               {loading && (
                 <button disabled>
                   <FaSpinner className="loading-spinner" />

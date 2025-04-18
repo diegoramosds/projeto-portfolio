@@ -52,14 +52,11 @@ const Footer = () => {
             </div>
             <div className="social-medias-footer">
               <div className="icons-footer">
-                <a href="">
+                <a href="https://github.com/diegoramosds" target="_blank">
                   <Github />
                 </a>
-                <a href="">
+                <a href="https://www.linkedin.com/in/diego-rds/" target="_blank">
                   <Linkedin />
-                </a>
-                <a href="">
-                  <Github />
                 </a>
               </div>
             </div>
