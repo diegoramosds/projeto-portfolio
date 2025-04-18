@@ -22,7 +22,7 @@
 }
 .text-container h6 {
   width: 25%;
-  animation: pulse 5s infinite linear;
+    animation: pulse-shadow 4s ease-in-out infinite;
 }
 .text-container h1 {
   font-size: 4em;
@@ -32,17 +32,16 @@
   width: 90%;
 }
 
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 100px 10px var(--box-shadow);
+@keyframes pulse-shadow {
+  0%, 100% {
+    box-shadow: 0 0 130px 20px var(--box-shadow);
   }
   50% {
-    box-shadow: 0 0 230px 80px var(--box-shadow);
-  }
-  100% {
-    box-shadow: 0 0 100px 10px var(--box-shadow);
+    box-shadow: 0 0 180px 30px var(--box-shadow);
   }
 }
+
+
 .button-container {
   display: flex;
   gap: 20px;
@@ -123,7 +122,6 @@
     margin-top: 2em;
     font-weight: bold;
   }
-
 }
 
 @media screen and (min-width: 321px) and (max-width: 766px) {
@@ -137,7 +135,7 @@
     margin-top: 7em;
   }
   .text-container h6 {
-    width: 55%;
+    min-width: 30%;
     margin-bottom: 1em;
   }
   .text-container h1 {
