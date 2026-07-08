@@ -67,7 +67,7 @@ function Contact() {
             contato e vamos discutir como posso ajudar.
           </p>
           <h4>
-            <Mail /> contato@exemplo.com
+            <Mail /> diegoramos3709@gmail.com
           </h4>
 
           <div className="social-medias">
